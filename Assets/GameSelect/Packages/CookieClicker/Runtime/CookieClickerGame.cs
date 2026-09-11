@@ -1,6 +1,8 @@
 ﻿using MenSharp;
 using UnityEngine;
 using UnityEngine.UI;
+using VRC.Udon;
+using VRC.Udon.Common.Interfaces;
 
 [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
 public class CookieClickerGame : MenSharpBehaviour
@@ -11,6 +13,7 @@ public class CookieClickerGame : MenSharpBehaviour
     public RectTransform cookie;
     public AudioSource sound;
     public AudioClip clickSound, purchaseSound;
+    public UdonBehaviour sessionController;
     public string[] upgradeNames;
     public float[] baseCosts, clickGains, productionGains;
     public float costMultiplier = 1.18f;
@@ -75,7 +78,12 @@ public class CookieClickerGame : MenSharpBehaviour
         refreshTime += Time.deltaTime;
         if (refreshTime >= 0.1f) { refreshTime = 0f; RefreshDisplay(); }
     }
-    public void BackToMenu() { gameObject.SetActive(false); }
+    public void BackToMenu()
+    {
+        if (sessionController != null)
+            sessionController.SendCustomNetworkEvent(NetworkEventTarget.Owner, "RequestClose");
+        else gameObject.SetActive(false);
+    }
     private string Format(float value)
     {
         if (value >= 1000000000f) return (value / 1000000000f).ToString("F1") + " B";

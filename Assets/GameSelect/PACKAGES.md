@@ -57,3 +57,7 @@ RuntimeのasmdefがMenSharp.Runtimeを参照するため、MenSharpがゲーム�
 ## VRChatへの反映
 
 追加・削除はUnity編集時にPrefab／シーンへ焼き込みます。公開済みワールドへ反映するには再ビルド・アップロードが必要です。VRChat実行中にPC内のファイルや任意のC#を読み込む方式ではありません。
+
+## 4モニター構成
+
+GameRoom.prefabでは起動・終了をルーム共通にします。ゲーム側のsessionControllerフィールドを自動接続します。詳しくは[ROOM.md](ROOM.md)を参照してください。ゲーム内部の得点・手札は今回の同期対象外です。

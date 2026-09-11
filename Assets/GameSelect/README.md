@@ -1,10 +1,10 @@
-# Game Select / MenSharp
+﻿# Game Select / MenSharp
 
 クッキークリッカーを実装済みです。ゲーム名フォルダーの追加・削除による管理とゲームの仕様は [PACKAGES.md](PACKAGES.md) を参照してください。
 
 1920 × 1080のWorld Space Canvas。`GameSelectPanel.prefab`をワールドに配置して使います。
 現在のシーンにも配置済みです。左右の矢印・サイドカードで選択し、PLAYまたは中央カードで開始します。
-選択と開始はローカル動作です。右上は実際のインスタンス人数です。ゲーム内の参加者管理・同期は将来のゲーム側で実装してください。
+単体パネルはローカル動作です。4枚構成のGameRoom.prefabはゲーム起動・終了をルームで同期します。詳細は[ROOM.md](ROOM.md)。得点や手札などゲーム内部の同期は各ゲーム側で実装します。
 
 ## 選択操作
 
@@ -83,3 +83,4 @@ Canvasは4.8×2.7m、VRCUiShapeとGraphicRaycaster付きです。サイズ変更
 ## ライセンス
 
 自作部分はMIT、同梱NotoフォントはSIL OFL 1.1。第三者表記はTHIRD_PARTY_NOTICES.mdを参照してください。
+

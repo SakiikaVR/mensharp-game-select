@@ -208,6 +208,7 @@ public static class GameSelectBuilder
             PrefabUtility.RecordPrefabInstancePropertyModifications(panel);
             EditorSceneManager.MarkSceneDirty(panel.gameObject.scene);
         }
+        GameRoomSetup.RefreshRooms();
         AssetDatabase.SaveAssets();
         Debug.Log("Game Select: refreshed " + packages.Length + " JSON packages.");
     }

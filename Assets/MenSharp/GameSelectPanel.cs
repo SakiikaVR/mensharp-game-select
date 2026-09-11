@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using VRC.SDKBase;
 using VRC.Udon;
+using VRC.Udon.Common.Interfaces;
 
 [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
 public class GameSelectPanel : MenSharpBehaviour
@@ -46,6 +47,12 @@ public class GameSelectPanel : MenSharpBehaviour
     public Image[] carouselIcons;
     public float turnDuration = 0.36f;
     public bool isTurning;
+    [Header("Shared room session (optional)")]
+    public UdonBehaviour sessionController;
+    public string sessionGameId = "";
+    public GameObject sessionPlaceholder;
+    public Text sessionTitle;
+    private string displayedSessionId = "";
     private float turnTime;
     private int turnDirection;
     private int pendingTurns;
@@ -269,6 +276,12 @@ public class GameSelectPanel : MenSharpBehaviour
     {
         if (isTurning) return;
         if (titles == null || titles.Length == 0) return;
+        if (sessionController != null)
+        {
+            statusLabel.text = "ルームでゲームを開いています…";
+            sessionController.SendCustomNetworkEvent(NetworkEventTarget.Owner, "RequestOpen", gameIds[selectedIndex]);
+            return;
+        }
         if (gameRoots[selectedIndex] == null || entryPoints[selectedIndex] == null)
         {
             statusLabel.text = titles[selectedIndex] + " は準備中です";
@@ -280,5 +293,43 @@ public class GameSelectPanel : MenSharpBehaviour
         // A newly activated UdonBehaviour initializes at the next frame.
         entryPoints[selectedIndex].SendCustomEventDelayedFrames(startEvents[selectedIndex], 1);
         statusLabel.text = titles[selectedIndex] + " を開始しました";
+    }
+
+    public void CloseRoomGame()
+    {
+        if (sessionController != null)
+            sessionController.SendCustomNetworkEvent(NetworkEventTarget.Owner, "RequestClose");
+    }
+
+    public void _ApplySession()
+    {
+        if (displayedSessionId == sessionGameId) return;
+        displayedSessionId = sessionGameId;
+        isTurning = false; pendingTurns = 0;
+        for (int i = 0; i < carouselIcons.Length; i++) carouselIcons[i].gameObject.SetActive(false);
+        leftIcon.enabled = true; centerIcon.enabled = true; rightIcon.enabled = true;
+        leftTitle.color = new Color(0.11f,0.11f,0.11f,1f);
+        centerTitle.color = leftTitle.color; rightTitle.color = leftTitle.color;
+        ClearFocusVisuals();
+        for (int i = 0; i < gameRoots.Length; i++)
+            if (gameRoots[i] != null) gameRoots[i].SetActive(false);
+        if (sessionPlaceholder != null) sessionPlaceholder.SetActive(false);
+        if (sessionGameId == "") { RefreshView(); return; }
+        int selected = -1;
+        for (int i = 0; i < gameIds.Length; i++) if (gameIds[i] == sessionGameId) selected = i;
+        if (selected < 0) return;
+        selectedIndex = selected;
+        RefreshView();
+        if (gameRoots[selected] == null || entryPoints[selected] == null)
+        {
+            if (sessionPlaceholder != null)
+            {
+                sessionTitle.text = titles[selected] + "\n\nゲーム本体は準備中です";
+                sessionPlaceholder.SetActive(true);
+            }
+            return;
+        }
+        gameRoots[selected].SetActive(true);
+        entryPoints[selected].SendCustomEventDelayedFrames(startEvents[selected], 1);
     }
 }

@@ -2,7 +2,9 @@
   "name": "GamePackages.CookieClicker.Runtime",
   "references": [
     "ProjectTesca.MenSharp.Runtime",
-    "Unity.ugui"
+    "Unity.ugui",
+    "VRC.Udon",
+    "VRC.SDKBase"
   ],
   "autoReferenced": true
 }
