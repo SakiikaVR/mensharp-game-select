@@ -1,6 +1,6 @@
 # Game Select / MenSharp
 
-おやつ工房・おみくじを実装済みです。ゲーム名フォルダーの追加・削除による管理とゲームの仕様は [PACKAGES.md](PACKAGES.md) を参照してください。
+大富豪（CPU・11ルール・解説音声）、おやつ工房、おみくじを実装済みです。ゲーム名フォルダーの追加・削除による管理とゲームの仕様は [PACKAGES.md](PACKAGES.md) を参照してください。
 
 1920 × 1080のWorld Space Canvas。`GameSelectPanel.prefab`をワールドに配置して使います。
 現在のシーンにも配置済みです。左右の矢印・サイドカードで選択し、PLAYまたは中央カードで開始します。
@@ -51,7 +51,7 @@
 - `minPlayers` / `maxPlayers`: 対応人数の表示（1〜80）。参加人数の制限はゲーム側の責務です。
 - `icon`: `cookie` / `cards` / `shrine` / `gamepad`。省略時はgamepad。
 - `iconPath`: 任意。`Assets/MyGame/icon.png`のような、Spriteとしてインポートした画像のパス。指定時はiconより優先。
-- `prefab`: 空文字なら未実装。PLAY時に「準備中」と表示します。
+- `prefab`: `gameType` とともに空文字なら未実装。PLAY時に「準備中」と表示します。
 - `startEvent`: 将来のゲームPrefabに送る公開Udonイベント名。省略時は`StartGame`。
 
 JSONは**Editorで検証してビルド用の配列・Unity参照へ変換**します。VRChat実行中の外部JSONダウンロードや実行コードの配信機能ではありません。追加後はワールドを再ビルド・アップロードしてください。

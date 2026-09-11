@@ -7,7 +7,11 @@
   "minPlayers": 2,
   "maxPlayers": 5,
   "icon": "cards",
-  "prefab": "",
   "startEvent": "StartGame",
-  "iconPath": "Images/cards.png"
+  "iconPath": "Images/cards.png",
+  "gameType": "daifugo",
+  "builderType": "DaifugoPackageBuilder",
+  "settings": {
+    "defaultRules": 2047
+  }
 }

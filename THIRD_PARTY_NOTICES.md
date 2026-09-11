@@ -3,7 +3,7 @@
 ## Project code and artwork — MIT
 
 Copyright (c) 2026 SakiikaVR. See LICENSE.
-Applies to the original game selector, game scripts, editor tools, procedural PNG artwork and synthesized WAV effects. Third-party components below retain their own licenses.
+Applies to the original game selector, game scripts, editor tools, procedural PNG artwork and original synthesized tone effects (excluding the VOICEVOX speech described below). Third-party components below retain their own licenses.
 
 ## MenSharp (M#) — MIT
 
@@ -28,3 +28,7 @@ Unity, VRChat SDK Worlds, Unity UI and Newtonsoft.Json are installed through the
 ## Distribution review
 
 Windows fonts previously used for local development are excluded and replaced with Noto Sans JP. No reference screenshot, VRChat account data, SDK binaries, avatar packages, local logs, credentials or world scene is included. Game icons are project-generated shapes; audio effects are project-synthesized tones. This inventory documents the distributed files and their sources; it is not a claim that a license overrides trademark or other third-party rights.
+
+## Daifugo explanatory speech — VOICEVOX:ずんだもん
+
+Generated speech at Assets/GameSelect/Packages/Daifugo/Audio/Voice is governed by the VOICEVOX and voice-library terms, not MIT. Required credit is displayed in-game. Retain the notice and pass these obligations to downstream users. See that folder’s LICENSE.txt, https://voicevox.hiroshiba.jp/term/ and https://zunko.jp/con_ongen_kiyaku.html . No engine/model is bundled.

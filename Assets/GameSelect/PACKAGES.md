@@ -16,7 +16,7 @@ Assets/GameSelect/Packages/
 │  ├─ Images/cookie.png, round.png        ゲーム用画像
 │  ├─ Audio/click.wav, purchase.wav       ゲーム用効果音
 │  └─ README.md
-├─ Daifugo/game.json, Images/, Audio/    現在は選択項目のみ
+├─ Daifugo/game.json, Runtime/, Editor/, Images/, Audio/  対戦・CPU・解説音声
 └─ Omikuji/game.json, Runtime/, Editor/, Images/, Audio/  おみくじ本体
 ```
 
@@ -60,6 +60,10 @@ RuntimeのasmdefがMenSharp.Runtimeを参照するため、MenSharpがゲーム�
 
 ## 4モニター構成
 
-GameRoom.prefabでは起動・終了をルーム共通にします。ゲーム側のsessionControllerフィールドを自動接続します。詳しくは[ROOM.md](ROOM.md)を参照してください。ゲーム内部の得点・手札は今回の同期対象外です。
+GameRoom.prefabでは起動・終了をルーム共通にします。ゲーム側のsessionControllerフィールドを自動接続します。詳しくは[ROOM.md](ROOM.md)を参照してください。大富豪は手札所有・手番・ルール・順位も同期します。おやつ工房とおみくじの内部状態はローカルです。
 
 選択画面左下の時計は端末のローカル時刻（HH:mm）を1秒ごとに更新します。時刻はネットワーク同期しません。
+
+## 大富豪
+
+参加・配札・手札選択・パス・順位・カード交換を実装。CPU補充、初期ONの11ルール、歯車設定、5ページのルールブック、VOICEVOX:ずんだもんの解説に対応。詳細は[Daifugo/README.md](Packages/Daifugo/README.md)。解説音声はMITではなく同梱の音声利用条件に従います。

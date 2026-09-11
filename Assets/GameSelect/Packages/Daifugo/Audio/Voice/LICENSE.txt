@@ -1,0 +1,12 @@
+VOICEVOX:ずんだもん
+Generated using VOICEVOX, Zundamon normal style, for this game's original explanatory lines.
+The audio files in this directory are not offered under the project's MIT license.
+
+Use and redistribution must comply with the VOICEVOX and voice-library terms, including required credit and requiring downstream users to comply with those terms.
+Keep the credit "VOICEVOX:ずんだもん" visible in the application or its introduction and retain this notice when redistributing these audio files.
+
+VOICEVOX software terms: https://voicevox.hiroshiba.jp/term/
+VOICEVOX Zundamon voice-library and common audio terms: https://zunko.jp/con_ongen_kiyaku.html
+Terms reviewed: 2026-09-12 (JST).
+
+The software engine and voice models are not redistributed with this package.

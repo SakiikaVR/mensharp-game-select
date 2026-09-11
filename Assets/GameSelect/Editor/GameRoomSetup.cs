@@ -70,6 +70,27 @@ public static class GameRoomSetup
             EditorUtility.SetDirty(panel);PrefabUtility.RecordPrefabInstancePropertyModifications(panel);
             MenSharpProxy.SyncThenTransfer(new List<GameObject>{panel.gameObject},false);
         }
+        // Optional shared-table contract. Package classes remain removable.
+        for(int gameIndex=0;gameIndex<panels[0].gameIds.Length;gameIndex++)
+        {
+            string id=panels[0].gameIds[gameIndex];
+            var games=new List<GameObject>();
+            foreach(var p in panels)
+                for(int k=0;k<p.gameIds.Length;k++) if(p.gameIds[k]==id && p.gameRoots[k]!=null)games.Add(p.gameRoots[k]);
+            var views=games.Select(g=>g.GetComponent<UdonBehaviour>()).ToArray();
+            if(views.Length==0)continue;
+            foreach(var game in games)
+            {
+                foreach(var proxy in game.GetComponents<MenSharp.MenSharpBehaviour>())
+                {
+                    var authority=proxy.GetType().GetField("table");var peers=proxy.GetType().GetField("roomViews");
+                    if(authority==null || peers==null || authority.FieldType!=typeof(UdonBehaviour) || peers.FieldType!=typeof(UdonBehaviour[]))continue;
+                    authority.SetValue(proxy,views[0]);peers.SetValue(proxy,views);
+                    EditorUtility.SetDirty(proxy);PrefabUtility.RecordPrefabInstancePropertyModifications(proxy);
+                }
+                MenSharpProxy.SyncThenTransfer(new List<GameObject>{game},false);
+            }
+        }
         EditorUtility.SetDirty(session);PrefabUtility.RecordPrefabInstancePropertyModifications(session);
         MenSharpProxy.SyncThenTransfer(new List<GameObject>{session.gameObject},false);
     }
