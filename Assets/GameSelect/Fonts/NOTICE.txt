@@ -1,0 +1,6 @@
+﻿Noto Sans JP Bold
+Copyright (c) 2014-2021 Adobe (http://www.adobe.com/).
+Licensed under the SIL Open Font License, Version 1.1. See OFL.txt.
+Unmodified font from https://github.com/notofonts/noto-cjk
+Source: Sans/SubsetOTF/JP/NotoSansJP-Bold.otf
+The copyright and license notices are also embedded in the font metadata.

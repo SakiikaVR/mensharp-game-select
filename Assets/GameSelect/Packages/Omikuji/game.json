@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "omikuji",
+  "title": "おみくじ",
+  "category": "FORTUNE",
+  "order": 30,
+  "minPlayers": 1,
+  "maxPlayers": 5,
+  "icon": "shrine",
+  "prefab": "",
+  "startEvent": "StartGame",
+  "iconPath": "Images/shrine.png"
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "cookie-clicker",
+  "title": "クッキークリッカー",
+  "category": "CLICKER / LOCAL",
+  "order": 10,
+  "minPlayers": 1,
+  "maxPlayers": 1,
+  "icon": "cookie",
+  "gameType": "cookie-clicker",
+  "clicker": {
+    "initialClickPower": 1,
+    "costMultiplier": 1.18,
+    "upgrades": [
+      {
+        "name": "厚焼きレシピ",
+        "cost": 15,
+        "clickGain": 1,
+        "productionGain": 0
+      },
+      {
+        "name": "小さなオーブン",
+        "cost": 25,
+        "clickGain": 0,
+        "productionGain": 1
+      },
+      {
+        "name": "ベーカリー",
+        "cost": 150,
+        "clickGain": 0,
+        "productionGain": 8
+      },
+      {
+        "name": "クッキー工房",
+        "cost": 1000,
+        "clickGain": 0,
+        "productionGain": 50
+      }
+    ],
+    "clickSound": "Audio/click.wav",
+    "purchaseSound": "Audio/purchase.wav"
+  },
+  "builderType": "ClickerPackageBuilder",
+  "iconPath": "Images/cookie.png"
+}

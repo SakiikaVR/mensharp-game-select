@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "daifugo",
+  "title": "大富豪",
+  "category": "CARD GAME",
+  "order": 20,
+  "minPlayers": 2,
+  "maxPlayers": 5,
+  "icon": "cards",
+  "prefab": "",
+  "startEvent": "StartGame",
+  "iconPath": "Images/cards.png"
+}
