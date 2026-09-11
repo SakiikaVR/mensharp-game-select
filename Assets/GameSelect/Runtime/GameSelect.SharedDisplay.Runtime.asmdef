@@ -1,0 +1,5 @@
+{
+  "name": "GameSelect.SharedDisplay.Runtime",
+  "references": ["ProjectTesca.MenSharp.Runtime", "Unity.ugui", "VRC.Udon", "VRC.SDKBase"],
+  "autoReferenced": true
+}

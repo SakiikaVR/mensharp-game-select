@@ -66,4 +66,4 @@ GameRoom.prefabでは起動・終了をルーム共通にします。ゲーム�
 
 ## 大富豪
 
-参加・配札・手札選択・パス・順位・カード交換を実装。CPU補充、初期ONの11ルール、歯車設定、5ページのルールブック、VOICEVOX:ずんだもんの解説に対応。詳細は[Daifugo/README.md](Packages/Daifugo/README.md)。解説音声はMITではなく同梱の音声利用条件に従います。
+参加・配札・手札選択・パス・順位・カード交換を実装。4席へのCPU補充、初期ONの12ルール、歯車設定、12ページのルールブック、VOICEVOX:ずんだもんの解説に対応。詳細は[Daifugo/README.md](Packages/Daifugo/README.md)。解説音声はMITではなく同梱の音声利用条件に従います。

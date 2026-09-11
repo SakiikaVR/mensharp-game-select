@@ -9,10 +9,10 @@ public static class DaifugoRulesTests
     private static void Check(bool v,string reason){assertions++;if(!v)throw new Exception("Daifugo: "+reason);}
     private static void Reset(int bits=2047)
     {
-        g.rules=bits;g.phase=1;g.seats=new[]{1,2,3,0,0};g.names=new[]{"A","B","C","",""};g.owners=new int[53];
+        g.disqualified=new bool[4];g.penaltyCount=0;g.rules=bits;g.phase=1;g.seats=new[]{1,2,3,0};g.names=new[]{"A","B","C",""};g.owners=new int[53];
         for(int c=0;c<53;c++)g.owners[c]=-1;
         g.owners[51]=0;g.owners[50]=1;g.owners[49]=2;
-        g.places=new int[5];g.previousPlaces=new int[5];g.passed=new bool[5];g.turn=0;g.lastSeat=-1;g.pileCount=0;g.pileRank=-1;g.pileSuit=0;g.lockSuit=0;g.pileStraight=false;g.pileJoker=false;g.revolution=false;g.jackBack=false;g.finished=0;g.pending=0;g.pendingSeat=-1;g.giveRemaining=g.discardRemaining=g.bombRemaining=g.skipCount=0;g.clearAfter=false;g.effectMask=0;
+        g.places=new int[4];g.previousPlaces=new int[4];g.passed=new bool[4];g.turn=0;g.lastSeat=-1;g.pileCount=0;g.pileRank=-1;g.pileSuit=0;g.lockSuit=0;g.pileStraight=false;g.pileJoker=false;g.revolution=false;g.jackBack=false;g.finished=0;g.pending=0;g.pendingSeat=-1;g.giveRemaining=g.discardRemaining=g.bombRemaining=g.skipCount=0;g.clearAfter=false;g.effectMask=0;
     }
     private static void Give(int seat,params int[] cards){foreach(int c in cards)g.owners[c]=seat;}
     private static bool Play(int seat,params int[] cards)
@@ -46,10 +46,18 @@ public static class DaifugoRulesTests
             Reset((1<<6)|(1<<2));Give(0,5,6,7,8);Give(1,17,18,19,20);Check(Play(0,5,6,7,8)&&g.jackBack,"stair J back");Check(Play(1,17,18,19,20),"stair strength stays consistent after J flip");
             Reset();g.owners[51]=-1;Give(0,5);Check(Play(0,5)&&g.places[0]==1&&g.turn==1,"finish on eight");
             Reset();g.owners[51]=-1;g.owners[49]=-1;Give(0,7,0);Give(2,26);Play(0,7);Play(0,0);Check(g.places[0]==1,"finish on discard");
+            foreach(int c in new[]{12,0,5,52})
+            {
+                Reset(4095);g.owners[51]=-1;Give(0,c);g.revolution=c==0;
+                Check(Play(0,c),"forbidden move resolves");Check(g.disqualified[0]&&g.places[0]==3,"forbidden finish is last");
+            }
+            Reset(4095);g.owners[51]=-1;Give(0,0);Check(Play(0,0)&&!g.disqualified[0],"normal three allowed");
+            Reset(4095);g.owners[51]=-1;g.revolution=true;Give(0,12);Check(Play(0,12)&&!g.disqualified[0],"revolution two allowed");
+            Reset(2047);g.owners[51]=-1;Give(0,12);Check(Play(0,12)&&!g.disqualified[0],"forbidden option off");
             // Complete shuffled rounds exercise pending effects, passes, and ranking without an external client.
             for(int run=0;run<20;run++)
             {
-                Reset();g.phase=0;g.Deal();int steps=0;
+                Reset();g.phase=0;g.Deal();Check(g.HandCount(0)+g.HandCount(1)+g.HandCount(2)+g.HandCount(3)==53,"all 53 dealt");int steps=0;
                 while(g.phase!=2&&steps++<3000)
                 {
                     int s=g.turn;
@@ -71,14 +79,14 @@ public static class DaifugoRulesTests
             }
             for(int run=0;run<30;run++)
             {
-                Reset();g.phase=0;g.seats=new[]{1,0,0,0,0};int bots=1+run%4;
-                for(int i=0;i<bots;i++)g.AddCpu();g.Deal();int steps=0;
+                Reset(4095);g.phase=0;g.seats=new[]{1,0,0,0};int bots=1+run%3;
+                for(int i=0;i<bots;i++)g.AddCpu();g.Deal();Check(g.HandCount(0)+g.HandCount(1)+g.HandCount(2)+g.HandCount(3)==53,"all 53 dealt");int steps=0;
                 while(g.phase!=2&&steps++<2000)Check(g.CpuStep(),"CPU legal move/pending/pass");
                 Check(g.phase==2,"CPU match terminates");
                 for(int s=0;s<=bots;s++)Check(g.places[s]>=1&&g.places[s]<=bots+1,"CPU rank range");
                 g.Deal();steps=0;while(g.phase==3&&steps++<5)Check(g.CpuStep(),"CPU card exchange");Check(g.phase==1,"CPU exchange completes");
             }
-            return "PASS "+assertions+" assertions, 11 rule transitions, 20 basic rounds, 30 CPU rounds (2–5 seats)";
+            return "PASS "+assertions+" assertions, 11 rule transitions, 20 basic rounds, 30 CPU rounds (2–4 seats)";
         }
         finally{UnityEngine.Object.DestroyImmediate(o);}
     }

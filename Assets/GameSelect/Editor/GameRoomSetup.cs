@@ -16,7 +16,7 @@ public static class GameRoomSetup
     {
         if (EditorApplication.isPlayingOrWillChangePlaymode) return;
         var existing = Object.FindObjectOfType<GameRoomSession>();
-        if (existing != null) { Rewire(existing); Selection.activeGameObject=existing.gameObject; return; }
+        if (existing != null) { Rewire(existing); GameRoomFurniture.Configure(existing); Selection.activeGameObject=existing.gameObject; return; }
         MenSharpCompiler.CompileAll();
         var first = Object.FindObjectOfType<GameSelectPanel>();
         if (first == null) { GameSelectBuilder.CreatePanel(); first=Object.FindObjectOfType<GameSelectPanel>(); }
@@ -34,6 +34,7 @@ public static class GameRoomSetup
             PrefabUtility.RecordPrefabInstancePropertyModifications(go.transform);
         }
         Rewire(session);
+        GameRoomFurniture.Configure(session);
         PrefabUtility.SaveAsPrefabAssetAndConnect(root,RoomPrefabPath,InteractionMode.AutomatedAction);
         EditorSceneManager.SaveScene(root.scene);
         Selection.activeGameObject=root;
@@ -93,6 +94,7 @@ public static class GameRoomSetup
         }
         EditorUtility.SetDirty(session);PrefabUtility.RecordPrefabInstancePropertyModifications(session);
         MenSharpProxy.SyncThenTransfer(new List<GameObject>{session.gameObject},false);
+        GameRoomStatusBuilder.Configure(session);
     }
 
     private static void EnsurePlaceholder(GameSelectPanel panel)

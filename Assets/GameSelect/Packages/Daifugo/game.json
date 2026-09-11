@@ -4,14 +4,14 @@
   "title": "大富豪",
   "category": "CARD GAME",
   "order": 20,
-  "minPlayers": 2,
-  "maxPlayers": 5,
+  "minPlayers": 1,
+  "maxPlayers": 4,
   "icon": "cards",
   "startEvent": "StartGame",
   "iconPath": "Images/cards.png",
   "gameType": "daifugo",
   "builderType": "DaifugoPackageBuilder",
   "settings": {
-    "defaultRules": 2047
+    "defaultRules": 4095
   }
 }

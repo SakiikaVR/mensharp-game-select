@@ -45,6 +45,11 @@ public static class ClickerPackageBuilder
         packageArt = package.packageDirectory + "/Images/";
         var root = Rect(package.id, parent, 0, 0, 1920, 1080);
         var game = root.gameObject.AddComponent<CookieClickerGame>();
+        var shared=Rect("SharedTableDisplay",root,0,0,1,1);
+        game.sharedPileLabel=Text("Title",shared,"おやつ工房 / みんなのスコア",0,0,1,1,40);
+        game.sharedStateLabel=Text("Scores",shared,"スコアを集計しています",0,0,1,1,40);
+        game.sharedTurnLabel=Text("Details",shared,"累計の焼き上がり",0,0,1,1,40);
+        shared.gameObject.SetActive(false);
         // Opaque raycast target prevents clicks leaking into the selection panel.
         var background = root.gameObject.AddComponent<Image>();
         background.color = new Color32(246,245,242,255); background.raycastTarget = true;
@@ -81,6 +86,8 @@ public static class ClickerPackageBuilder
         MenSharpProxy.SyncThenTransfer(new List<GameObject>{root.gameObject},false);
         var backing=root.GetComponent<UdonBehaviour>();
         if(backing==null) throw new InvalidOperationException("CookieClickerGame MenSharp program is not compiled.");
+        game.self=backing;game.table=backing;game.roomViews=new[]{backing};
+        MenSharpProxy.SyncThenTransfer(new List<GameObject>{root.gameObject},false);
         UnityEventTools.AddStringPersistentListener(bake.onClick,backing.SendCustomEvent,"Bake");
         UnityEventTools.AddStringPersistentListener(back.onClick,backing.SendCustomEvent,"BackToMenu");
         string[] methods={"BuyFirst","BuySecond","BuyThird","BuyFourth"};

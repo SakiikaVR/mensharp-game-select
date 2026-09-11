@@ -12,9 +12,11 @@ public class DaifugoGame : MenSharpBehaviour
     public UdonBehaviour self, table, sessionController;
     public UdonBehaviour[] roomViews;
     public Text statusLabel, tableLabel, playersLabel, handLabel, hintLabel, settingsLabel;
-    public Text[] cardLabels, ruleLabels;
+    public Text sharedPileLabel, sharedStateLabel, sharedTurnLabel;
+    public Text[] cardLabels, ruleLabels, opponentNames, opponentCounts;
+    public GameObject[] opponentTiles;
     public Button[] cardButtons, ruleButtons, bombButtons;
-    public Button joinButton, leaveButton, startButton, playButton, passButton, addCpuButton, removeCpuButton;
+    public Button joinButton, leaveButton, startButton, playButton, passButton, addCpuButton;
     public GameObject settingsPanel, bombPanel, bookPanel;
     public Text bookLabel;
     public string[] bookPages;
@@ -28,27 +30,30 @@ public class DaifugoGame : MenSharpBehaviour
     public bool soundEnabled = true;
 
     // Only the first room view is the authority. Other views read its snapshot.
+    [UdonSynced] public bool cpuEnabled = true;
+    [UdonSynced] public bool[] disqualified = new bool[4];
+    [UdonSynced] public int penaltyCount = 0;
     [UdonSynced] public int revision = 0;
     [UdonSynced] public int phase = 0; // lobby, playing, results, exchange
-    [UdonSynced] public int rules = 2047;
-    [UdonSynced] public int[] seats = new int[5];
-    [UdonSynced] public string[] names = new string[] { "", "", "", "", "" };
+    [UdonSynced] public int rules = 4095;
+    [UdonSynced] public int[] seats = new int[4];
+    [UdonSynced] public string[] names = new string[] { "", "", "", "" };
     [UdonSynced] public int[] owners = new int[53]; // 0..51 = suit*13 + (3..2), 52 joker
-    [UdonSynced] public int[] places = new int[5];
-    [UdonSynced] public bool[] passed = new bool[5];
+    [UdonSynced] public int[] places = new int[4];
+    [UdonSynced] public bool[] passed = new bool[4];
     [UdonSynced] public int turn = -1;
     [UdonSynced] public int lastSeat = -1;
     [UdonSynced] public int pileCount = 0, pileRank = -1, pileSuit = 0, lockSuit = 0;
     [UdonSynced] public bool pileStraight = false, pileJoker = false;
     [UdonSynced] public bool revolution = false, jackBack = false;
-    [UdonSynced] public string pileText = "", message = "参加を押してください（2～5人）";
+    [UdonSynced] public string pileText = "", message = "参加を押してください（1～4人）";
     [UdonSynced] public int finished = 0;
     [UdonSynced] public int pending = 0, pendingCount = 0, pendingSeat = -1, receiver = -1;
     [UdonSynced] public int giveRemaining = 0, discardRemaining = 0, bombRemaining = 0;
     [UdonSynced] public int skipCount = 0;
     [UdonSynced] public bool clearAfter = false;
     [UdonSynced] public int effectMask = 0, soundEvent = 0;
-    [UdonSynced] public int[] previousPlaces = new int[5];
+    [UdonSynced] public int[] previousPlaces = new int[4];
     [UdonSynced] public int exchangeStep = 0, roundLead = -1;
     private bool[] selected = new bool[53];
     private int seenRevision = -1, seenTurn = -1, queuedVoices = 0;
@@ -61,7 +66,7 @@ public class DaifugoGame : MenSharpBehaviour
         if (self != null && table == null) table = self;
         if (table == self && Networking.IsOwner(gameObject))
         {
-            for (int s = 0; s < 5; s++) if (seats[s] > 0 && VRCPlayerApi.GetPlayerById(seats[s]) == null) RemoveSeat(s);
+            for (int s = 0; s < 4; s++) if (seats[s] > 0 && VRCPlayerApi.GetPlayerById(seats[s]) == null) RemoveSeat(s);
             Commit();
         }
         _Render();
@@ -72,7 +77,7 @@ public class DaifugoGame : MenSharpBehaviour
         if (table != self) return;
         if (Networking.IsOwner(gameObject))
         {
-            for (int s = 0; s < 5; s++)
+            for (int s = 0; s < 4; s++)
                 if (seats[s] > 0 && VRCPlayerApi.GetPlayerById(seats[s]) == null) RemoveSeat(s);
             Commit();
         }
@@ -84,15 +89,15 @@ public class DaifugoGame : MenSharpBehaviour
         int s = SeatOf(player.playerId);
         if (s >= 0) { RemoveSeat(s); Commit(); }
     }
-    private int SeatOf(int id) { for (int s = 0; s < 5; s++) if (id > 0 && seats[s] == id) return s; return -1; }
-    private int FirstSeat() { for (int s = 0; s < 5; s++) if (seats[s] > 0) return s; return -1; }
-    private int PlayerCount() { int n = 0; for (int s = 0; s < 5; s++) if (seats[s] != 0) n++; return n; }
+    private int SeatOf(int id) { for (int s = 0; s < 4; s++) if (id > 0 && seats[s] == id) return s; return -1; }
+    private int FirstSeat() { for (int s = 0; s < 4; s++) if (seats[s] > 0) return s; return -1; }
+    private int PlayerCount() { int n = 0; for (int s = 0; s < 4; s++) if (seats[s] != 0) n++; return n; }
     public int HandCount(int s) { int n = 0; for (int c = 0; c < 53; c++) if (owners[c] == s) n++; return n; }
     private bool Rule(int bit) { return (rules & (1 << bit)) != 0; }
     private bool Active(int s) { return s >= 0 && seats[s] != 0 && places[s] == 0 && HandCount(s) > 0; }
     private int NextActive(int s)
     {
-        for (int i = 1; i <= 5; i++) { int n = (s + i + 5) % 5; if (Active(n)) return n; }
+        for (int i = 1; i <= 4; i++) { int n = (s + i + 4) % 4; if (Active(n)) return n; }
         return -1;
     }
     private void Commit() { revision++; RequestSerialization(); NotifyViews(); }
@@ -112,16 +117,22 @@ public class DaifugoGame : MenSharpBehaviour
         if (action == 0)
         {
             if (phase != 0 || seat >= 0) return;
-            for (int s = 0; s < 5; s++) if (seats[s] == 0) { seats[s] = caller.playerId; names[s] = caller.displayName; Commit(); return; }
+            for (int s = 0; s < 4; s++) if (seats[s] <= 0) { seats[s] = caller.playerId; names[s] = caller.displayName; Commit(); return; }
             return;
         }
         if (seat < 0 || expected != revision) return;
         if (action == 1) { RemoveSeat(seat); Commit(); return; }
-        if (action == 2 && seat == FirstSeat() && (phase == 0 || phase == 2) ) { if (PlayerCount() < 2) AddCpu(); Deal(); Commit(); return; }
-        if (action == 8 && seat == FirstSeat() && phase == 0) { AddCpu(); Commit(); return; }
-        if (action == 9 && seat == FirstSeat() && phase == 0) { for (int s = 4; s >= 0; s--) if (seats[s] < 0) { RemoveSeat(s); Commit(); return; } }
-        if (action == 5 && seat == FirstSeat() && phase == 0 && a >= 0 && a < 11) { rules ^= 1 << a; Commit(); return; }
-        if (action == 7 && seat == FirstSeat() && phase == 2) { phase = 0; for (int s = 0; s < 5; s++) { places[s] = 0; previousPlaces[s] = 0; } message = "参加とルールを設定してください"; Commit(); return; }
+        if (action == 2 && seat == FirstSeat() && (phase == 0 || phase == 2) ) { if (cpuEnabled) { for (int k = 0; k < 4; k++) AddCpu(); }
+            if (PlayerCount() < 2) { message = "CPUがOFFです。2人以上で参加してください"; Commit(); return; }
+            Deal(); Commit(); return; }
+        if (action == 8 && seat == FirstSeat() && phase == 0)
+        {
+            cpuEnabled = !cpuEnabled;
+            if (!cpuEnabled) for (int k = 0; k < 4; k++) if (seats[k] < 0) { seats[k] = 0; places[k] = 0; previousPlaces[k] = 0; }
+            Commit(); return;
+        }
+        if (action == 5 && seat == FirstSeat() && phase == 0 && a >= 0 && a < 12) { rules ^= 1 << a; Commit(); return; }
+        if (action == 7 && seat == FirstSeat() && phase == 2) { phase = 0; for (int s = 0; s < 4; s++) { places[s] = 0; previousPlaces[s] = 0; } message = "参加とルールを設定してください"; Commit(); return; }
         bool changed = false;
         if (action == 3) changed = TryPlay(seat, a, b);
         if (action == 4) changed = TryPass(seat);
@@ -130,7 +141,7 @@ public class DaifugoGame : MenSharpBehaviour
     }
     public void AddCpu()
     {
-        for (int s = 0; s < 5; s++) if (seats[s] == 0) { seats[s] = -s - 1; names[s] = "CPU " + (s + 1).ToString(); return; }
+        for (int s = 0; s < 4; s++) if (seats[s] == 0) { seats[s] = -s - 1; names[s] = "CPU " + (s + 1).ToString(); return; }
     }
     public bool CpuStep()
     {
@@ -206,23 +217,23 @@ public class DaifugoGame : MenSharpBehaviour
     public void Deal()
     {
         int oldPhase = phase;
-        for (int s = 0; s < 5; s++) { previousPlaces[s] = oldPhase == 2 ? places[s] : 0; places[s] = 0; passed[s] = false; }
+        for (int s = 0; s < 4; s++) { previousPlaces[s] = oldPhase == 2 ? places[s] : 0; places[s] = 0; passed[s] = false; }
         int[] deck = new int[53]; for (int c = 0; c < 53; c++) deck[c] = c;
         for (int i = 52; i > 0; i--) { int j = Random.Range(0, i + 1); int t = deck[i]; deck[i] = deck[j]; deck[j] = t; }
         int seat = FirstSeat();
         for (int i = 0; i < 53; i++)
         {
             owners[deck[i]] = seat;
-            do { seat = (seat + 1) % 5; } while (seats[seat] == 0);
+            do { seat = (seat + 1) % 4; } while (seats[seat] == 0);
         }
-        phase = 1; finished = 0; revolution = false; jackBack = false;
+        phase = 1; finished = 0; penaltyCount = 0; disqualified = new bool[4]; revolution = false; jackBack = false;
         pending = 0; giveRemaining = 0; discardRemaining = 0; bombRemaining = 0; skipCount = 0; clearAfter = false;
         pileCount = 0; pileRank = -1; pileSuit = 0; lockSuit = 0; pileText = ""; pileStraight = false; pileJoker = false; lastSeat = -1;
         turn = owners[26]; // diamond three
         roundLead = turn;
         if (oldPhase == 2)
         {
-            int worst = 0; for (int s = 0; s < 5; s++) if (seats[s] != 0 && previousPlaces[s] > worst) { worst = previousPlaces[s]; roundLead = s; }
+            int worst = 0; for (int s = 0; s < 4; s++) if (seats[s] != 0 && previousPlaces[s] > worst) { worst = previousPlaces[s]; roundLead = s; }
             exchangeStep = 0; phase = 3; NextExchange();
         }
         else message = "配札しました。ダイヤ3を持つ人から開始";
@@ -234,7 +245,7 @@ public class DaifugoGame : MenSharpBehaviour
         while (exchangeStep < pairs)
         {
             int rich = -1, poor = -1, best = exchangeStep + 1, worst = PlayerCount() - exchangeStep;
-            for (int s = 0; s < 5; s++) if (seats[s] != 0) { if (previousPlaces[s] == best) rich = s; if (previousPlaces[s] == worst) poor = s; }
+            for (int s = 0; s < 4; s++) if (seats[s] != 0) { if (previousPlaces[s] == best) rich = s; if (previousPlaces[s] == worst) poor = s; }
             exchangeStep++;
             if (rich < 0 || poor < 0) continue;
             int count = exchangeStep == 1 ? 2 : 1;
@@ -260,7 +271,7 @@ public class DaifugoGame : MenSharpBehaviour
     private bool MaskHas(int c, int lo, int hi) { return c < 27 ? (lo & (1 << c)) != 0 : (hi & (1 << (c - 27))) != 0; }
     public bool TryPlay(int seat, int lo, int hi)
     {
-        if ((phase != 1 && phase != 3) || seat != turn || lo < 0 || hi < 0 || (lo >> 27) != 0 || (hi >> 26) != 0) return false;
+        if (seat < 0 || seat >= 4 || (phase != 1 && phase != 3) || seat != turn || lo < 0 || hi < 0 || (lo >> 27) != 0 || (hi >> 26) != 0) return false;
         int n = 0;
         for (int c = 0; c < 53; c++) if (MaskHas(c, lo, hi)) { if (owners[c] != seat) return false; n++; }
         if (n == 0) return false;
@@ -315,6 +326,12 @@ public class DaifugoGame : MenSharpBehaviour
                 suit = lockSuit;
             }
         }
+        bool forbidden = false;
+        if (Rule(11) && n == HandCount(seat))
+        {
+            forbidden = joker || eight;
+            for (int c = 0; c < 52; c++) if (MaskHas(c, lo, hi) && c % 13 == (revolution ? 0 : 12)) forbidden = true;
+        }
         effectMask = 0; soundEvent = 1;
         if (Rule(4) && pileCount > 0 && lockSuit == 0 && suit != 0 && suit == pileSuit && !joker && !pileJoker)
         { lockSuit = suit; effectMask |= 1 << 4; }
@@ -322,6 +339,7 @@ public class DaifugoGame : MenSharpBehaviour
         pileText = "";
         for (int c = 0; c < 53; c++) if (MaskHas(c, lo, hi)) { owners[c] = -1; pileText += CardName(c) + "  "; }
         lastSeat = seat;
+        if (forbidden) { disqualified[seat] = true; places[seat] = PlayerCount() - penaltyCount; penaltyCount++; }
         if (straight) effectMask |= 1 << 6;
         if ((Rule(5) && group && n >= 4) || (Rule(7) && straight && n >= 4))
         { revolution = !revolution; effectMask |= 1 << (straight ? 7 : 5); }
@@ -335,6 +353,7 @@ public class DaifugoGame : MenSharpBehaviour
         if (bombRemaining > 0) effectMask |= 1 << 1;
         if (skipCount > 0) effectMask |= 1 << 10;
         clearAfter = (Rule(3) && eight) || spadeReturn;
+        if (forbidden) { effectMask |= 1 << 11; giveRemaining = 0; discardRemaining = 0; bombRemaining = 0; skipCount = 0; clearAfter = true; }
         pendingSeat = seat; message = names[seat] + " が " + pileText + "を出しました";
         ContinueEffects(); return true;
     }
@@ -365,9 +384,9 @@ public class DaifugoGame : MenSharpBehaviour
     }
     private void RankEmpty(int first)
     {
-        for (int i = 0; i < 5; i++) { int s = (first + i + 5) % 5; if (seats[s] != 0 && places[s] == 0 && HandCount(s) == 0) { finished++; places[s] = finished; } }
+        for (int i = 0; i < 4; i++) { int s = (first + i + 4) % 4; if (seats[s] != 0 && places[s] == 0 && HandCount(s) == 0) { finished++; places[s] = finished; } }
         int left = 0, last = -1;
-        for (int s = 0; s < 5; s++) if (Active(s)) { left++; last = s; }
+        for (int s = 0; s < 4; s++) if (Active(s)) { left++; last = s; }
         if (left <= 1)
         {
             if (last >= 0) { finished++; places[last] = finished; }
@@ -378,7 +397,7 @@ public class DaifugoGame : MenSharpBehaviour
     {
         pileCount = 0; pileRank = -1; pileSuit = 0; lockSuit = 0; pileStraight = false; pileJoker = false; pileText = "";
         jackBack = false; clearAfter = false; skipCount = 0;
-        for (int s = 0; s < 5; s++) passed[s] = false;
+        for (int s = 0; s < 4; s++) passed[s] = false;
         turn = Active(lead) ? lead : NextActive(lead); lastSeat = -1;
         message = "場が流れました。" + (turn >= 0 ? names[turn] : "") + " から";
     }
@@ -388,7 +407,7 @@ public class DaifugoGame : MenSharpBehaviour
         for (int k = 0; k <= skips; k++)
         {
             bool found = false;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 4; i++)
             {
                 next = NextActive(next);
                 if (next < 0 || (next == lastSeat && skips == 0)) { ClearTrick(lastSeat); return; }
@@ -407,8 +426,8 @@ public class DaifugoGame : MenSharpBehaviour
     private void RemoveSeat(int seat)
     {
         for (int c = 0; c < 53; c++) if (owners[c] == seat) owners[c] = -1;
-        if (places[seat] > 0) { int oldRank = places[seat]; for (int s = 0; s < 5; s++) if (places[s] > oldRank) places[s]--; finished = Mathf.Max(0, finished - 1); }
-        seats[seat] = 0; places[seat] = 0; previousPlaces[seat] = 0;
+        if (places[seat] > 0) { if (disqualified[seat]) penaltyCount--; else finished--; int oldRank = places[seat]; for (int s = 0; s < 4; s++) if (places[s] > oldRank) places[s]--; }
+        seats[seat] = 0; disqualified[seat] = false; places[seat] = 0; previousPlaces[seat] = 0;
         if (phase == 3) { pending = 0; phase = 0; turn = -1; message = "交換中の退出があったため、待機室に戻りました"; }
         if (phase == 1)
         {
@@ -420,7 +439,7 @@ public class DaifugoGame : MenSharpBehaviour
                 if (turn == seat || lastSeat == seat) ClearTrick(seat);
             }
         }
-        if (FirstSeat() < 0) { for (int s = 0; s < 5; s++) seats[s] = 0; phase = 0; pending = 0; turn = -1; message = "参加を押してください（2～5人）"; }
+        if (FirstSeat() < 0) { for (int s = 0; s < 4; s++) seats[s] = 0; phase = 0; pending = 0; turn = -1; message = "参加を押してください（1～4人）"; }
     }
 
     // Per-client UI: hands are never printed in another participant's view.
@@ -431,7 +450,6 @@ public class DaifugoGame : MenSharpBehaviour
         table.SendCustomNetworkEvent(NetworkEventTarget.Owner, "RequestAction", action, a, b, rev);
     }
     public void AddComputer() { SendAction(8, 0, 0); }
-    public void RemoveComputer() { SendAction(9, 0, 0); }
     public void RuleBook() { bookPanel.SetActive(!bookPanel.activeSelf); DrawBook(); }
     public void NextPage() { bookPage = (bookPage + 1) % bookPages.Length; DrawBook(); }
     public void PreviousPage() { bookPage = (bookPage + bookPages.Length - 1) % bookPages.Length; DrawBook(); }
@@ -446,7 +464,7 @@ public class DaifugoGame : MenSharpBehaviour
         int lo = 0, hi = 0;
         for (int c = 0; c < 53; c++) if (selected[c]) { if (c < 27) lo |= 1 << c; else hi |= 1 << (c - 27); }
         SendAction(3, lo, hi);
-        hintLabel.text = "送信しました。出せない場合は枚数・強さ・縛りを確認してください";
+        hintLabel.text = "出せない場合は枚数・強さ・縛りを確認";
     }
     public void Settings() { settingsPanel.SetActive(!settingsPanel.activeSelf); _Render(); }
     public void ToggleVoice()
@@ -478,7 +496,7 @@ public class DaifugoGame : MenSharpBehaviour
         int state = (int)table.GetProgramVariable("phase");
         int[] ids = (int[])table.GetProgramVariable("seats");
         int mine = -1, host = -1;
-        for (int s = 0; s < 5; s++) { if (ids[s] > 0 && host < 0) host = s; if (ids[s] == Networking.LocalPlayer.playerId) mine = s; }
+        for (int s = 0; s < 4; s++) { if (ids[s] > 0 && host < 0) host = s; if (ids[s] == Networking.LocalPlayer.playerId) mine = s; }
         if (seenRevision != rev)
         {
             for (int c = 0; c < 53; c++) selected[c] = false;
@@ -493,7 +511,7 @@ public class DaifugoGame : MenSharpBehaviour
                     else if (soundEvent == 3 || soundEvent == 4) effectsSource.PlayOneShot(winSound);
                 }
             }
-            seenRevision = rev; seenTurn = t; hintLabel.text = "カードを選択 → 出す / 効果を確定。パス後は場が流れるまで復帰しません";
+            seenRevision = rev; seenTurn = t; hintLabel.text = "カードを選択 → 出す / パス";
         }
         statusLabel.text = (string)table.GetProgramVariable("message");
         string[] ns = (string[])table.GetProgramVariable("names");
@@ -501,35 +519,66 @@ public class DaifugoGame : MenSharpBehaviour
         int[] os = (int[])table.GetProgramVariable("owners");
         bool[] passes = (bool[])table.GetProgramVariable("passed");
         playersLabel.text = "";
-        int totalSeats = 0; for (int s = 0; s < 5; s++) if (ids[s] != 0) totalSeats++;
-        for (int s = 0; s < 5; s++) if (ids[s] != 0)
+        int totalSeats = 0; for (int s = 0; s < 4; s++) if (ids[s] != 0) totalSeats++;
+        for (int s = 0; s < 4; s++) if (ids[s] != 0)
         {
             int count = 0; for (int c = 0; c < 53; c++) if (os[c] == s) count++;
-            playersLabel.text += (s == t ? "▶ " : "   ") + ns[s] + (s == mine ? "（あなた）" : "") + "   " + (state == 0 ? "参加中" : ps[s] > 0 ? ps[s].ToString() + "位 / " + (ps[s] == 1 ? "大富豪" : ps[s] == totalSeats ? "大貧民" : totalSeats >= 4 && ps[s] == 2 ? "富豪" : totalSeats >= 4 && ps[s] == totalSeats - 1 ? "貧民" : "平民") : count.ToString() + "枚" + (passes[s] ? " / PASS" : "")) + "\n";
+            playersLabel.text += (((bool[])table.GetProgramVariable("disqualified"))[s] ? "反則 " : "") + (s == t ? "▶ " : "   ") + ns[s] + (s == mine ? "（あなた）" : "") + "   " + (state == 0 ? "参加中" : ps[s] > 0 ? ps[s].ToString() + "位 / " + (ps[s] == 1 ? "大富豪" : ps[s] == totalSeats ? "大貧民" : totalSeats >= 4 && ps[s] == 2 ? "富豪" : totalSeats >= 4 && ps[s] == totalSeats - 1 ? "貧民" : "平民") : count.ToString() + "枚" + (passes[s] ? " / PASS" : "")) + "\n";
         }
+        int others = 0;
+        for (int s = 0; s < 4; s++) if (ids[s] != 0 && s != mine) others++;
+        int tile = 0;
+        for (int s = 0; s < 4; s++)
+        {
+            if (ids[s] == 0 || s == mine) continue;
+            int remaining = 0; for (int c = 0; c < 53; c++) if (os[c] == s) remaining++;
+            var rect = opponentTiles[tile].GetComponent<RectTransform>();
+            rect.anchoredPosition = new Vector2((tile - (others - 1) * .5f) * (1760f / Mathf.Max(1, others)), 238f);
+            rect.sizeDelta = new Vector2(1760f / Mathf.Max(1, others) - 20f, 160f);
+            opponentTiles[tile].SetActive(true);
+            opponentTiles[tile].GetComponent<Image>().color = s == t ? new Color(.65f,.87f,.71f) : Color.white;
+            string display = ns[s]; if (display.Length > 12) display = display.Substring(0,12) + "…";
+            opponentNames[tile].text = (s == t ? "▶ " : "") + display;
+            opponentCounts[tile].text = ps[s] > 0 ? ps[s].ToString() + " 位" : "残り " + remaining.ToString() + " 枚" + (passes[s] ? " / パス" : "");
+            tile++;
+        }
+        for (int i = tile; i < 4; i++) opponentTiles[i].SetActive(false);
         bool reversed = (bool)table.GetProgramVariable("revolution") != (bool)table.GetProgramVariable("jackBack");
+        sharedPileLabel.text = state == 0 ? "大富豪 / 参加待ち" : (int)table.GetProgramVariable("pileCount") == 0 ? "場にカードはありません" : (string)table.GetProgramVariable("pileText");
+        int locked = (int)table.GetProgramVariable("lockSuit");
+        string suits = "";
+        if ((locked & 1) != 0) suits += "♠ ";
+        if ((locked & 2) != 0) suits += "♥ ";
+        if ((locked & 4) != 0) suits += "♦ ";
+        if ((locked & 8) != 0) suits += "♣ ";
+        sharedStateLabel.text = "縛り：" + (locked == 0 ? "なし" : suits) + "    Jバック：" + ((bool)table.GetProgramVariable("jackBack") ? "発動中" : "なし") + "\n革命：" + ((bool)table.GetProgramVariable("revolution") ? "発動中" : "なし") + "    " + (reversed ? "2 → A → … → 4 → 3 が強い" : "3 → 4 → … → A → 2 が強い");
+        string currentName = t >= 0 && t < 4 ? ns[t] : "";
+        if (currentName.Length > 18) currentName = currentName.Substring(0,18) + "…";
+        sharedTurnLabel.text = state == 0 ? "参加 → 配札で開始" : state == 2 ? "対戦終了" : (state == 3 ? "カード交換 / " : "手番 / ") + currentName;
         tableLabel.text = ((int)table.GetProgramVariable("pileCount") == 0 ? "場にカードはありません" : (string)table.GetProgramVariable("pileText")) + "\n" + (reversed ? "弱い数字が強い" : "3 → 4 → … → A → 2") + ((int)table.GetProgramVariable("lockSuit") != 0 ? "   / 縛り中" : "") + ((bool)table.GetProgramVariable("revolution") ? "   / 革命" : "") + ((bool)table.GetProgramVariable("jackBack") ? "   / Jバック" : "");
-        joinButton.interactable = state == 0 && mine < 0;
+        bool openSeat = false; for (int s = 0; s < 4; s++) if (ids[s] <= 0) openSeat = true;
+        joinButton.interactable = state == 0 && mine < 0 && openSeat;
         leaveButton.interactable = mine >= 0;
         startButton.interactable = mine >= 0 && mine == host && (state == 0 || state == 2);
         int pend = (int)table.GetProgramVariable("pending");
         playButton.interactable = mine >= 0 && mine == t && (state == 1 || state == 3) && pend != 3;
         addCpuButton.interactable = mine >= 0 && mine == host && state == 0;
-        removeCpuButton.interactable = addCpuButton.interactable;
+        addCpuButton.GetComponentInChildren<Text>().text = (bool)table.GetProgramVariable("cpuEnabled") ? "CPU補充 ON" : "CPU補充 OFF";
         passButton.interactable = mine >= 0 && mine == t && state == 1 && pend == 0 && (int)table.GetProgramVariable("pileCount") > 0;
         bombPanel.SetActive(pend == 3 && mine == t);
         int bits = (int)table.GetProgramVariable("rules");
-        for (int i = 0; i < 11; i++) { ruleLabels[i].text = ((bits & (1 << i)) != 0 ? "● ON   " : "○ OFF   ") + ruleNames[i]; ruleButtons[i].interactable = state == 0 && (mine == host && mine >= 0); }
-        settingsLabel.text = "ルール変更：待機中・最初の参加者のみ / 全員に反映\n解説 " + ((bool)table.GetProgramVariable("voiceEnabled") ? "ON" : "OFF") + "   効果音 " + ((bool)table.GetProgramVariable("soundEnabled") ? "ON" : "OFF") + "（音声設定は自分だけ）\nVOICEVOX:ずんだもん";
+        for (int i = 0; i < 12; i++) { ruleLabels[i].text = ((bits & (1 << i)) != 0 ? "● ON   " : "○ OFF   ") + ruleNames[i]; ruleButtons[i].interactable = state == 0 && (mine == host && mine >= 0); }
+        settingsLabel.text = "待機中にホストが変更 / 全員に反映\n解説 " + ((bool)table.GetProgramVariable("voiceEnabled") ? "ON" : "OFF") + "   効果音 " + ((bool)table.GetProgramVariable("soundEnabled") ? "ON" : "OFF") + "（音声設定は自分だけ）\nVOICEVOX:ずんだもん";
         DrawHand();
     }
     private void DrawHand()
     {
         int mine = -1; int[] ids = (int[])table.GetProgramVariable("seats");
-        for (int s = 0; s < 5; s++) if (ids[s] == Networking.LocalPlayer.playerId) mine = s;
+        for (int s = 0; s < 4; s++) if (ids[s] == Networking.LocalPlayer.playerId) mine = s;
         int[] os = (int[])table.GetProgramVariable("owners");
         int state = (int)table.GetProgramVariable("phase");
-        int slot = 0, count = 0;
+        int slot = 0, count = 0, handSize = 0;
+        for (int c = 0; c < 53; c++) if (mine >= 0 && os[c] == mine) handSize++;
         // Rank-major ordering makes groups/straights easy to select.
         for (int k = 0; k < 53; k++)
         {
@@ -538,13 +587,17 @@ public class DaifugoGame : MenSharpBehaviour
             cardButtons[c].gameObject.SetActive(visible);
             if (!visible) continue;
             var rect = cardButtons[c].GetComponent<RectTransform>();
-            rect.anchoredPosition = new Vector2(-814f + (slot % 18) * 96f, -225f - (slot / 18) * 78f + (selected[c] ? 10f : 0f));
-            cardLabels[c].text = CardName(c);
+            float unit = handSize <= 1 ? 0f : (float)slot / (handSize - 1) * 2f - 1f;
+            float spread = Mathf.Min(780f, Mathf.Max(0, handSize - 1) * 62f);
+            rect.anchoredPosition = new Vector2(unit * spread, -250f - unit * unit * 27f + (selected[c] ? 40f : 0f));
+            rect.localEulerAngles = new Vector3(0f, 0f, -unit * 12f);
+            rect.SetSiblingIndex(slot);
+            cardLabels[c].text = c == 52 ? "JK\n★" : CardName(c).Substring(1) + "\n" + CardName(c).Substring(0,1);
             cardButtons[c].image.color = selected[c] ? new Color(0.7f,0.87f,0.78f) : Color.white;
             cardLabels[c].color = c < 52 && (c / 13 == 1 || c / 13 == 2) ? new Color(.65f,.18f,.17f) : new Color(.12f,.15f,.14f);
             slot++; if (selected[c]) count++;
         }
-        handLabel.text = mine < 0 ? "観戦中 / 参加すると自分の手札が表示されます" : "あなたの手札  " + slot.ToString() + "枚    選択 " + count.ToString() + "枚";
+        handLabel.text = mine < 0 ? "観戦中 / 参加すると自分の手札が表示されます" : (mine == (int)table.GetProgramVariable("turn") ? "▶ あなたの番   " : "手札   ") + slot.ToString() + "枚    選択 " + count.ToString() + "枚";
     }
     public void Update()
     {
@@ -555,7 +608,7 @@ public class DaifugoGame : MenSharpBehaviour
         }
         else cpuElapsed = 0f;
         if (table != self || !voiceEnabled || voiceSource == null || voiceSource.isPlaying) return;
-        for (int i = 0; i < 11; i++) if ((queuedVoices & (1 << i)) != 0)
+        for (int i = 0; i < 12; i++) if ((queuedVoices & (1 << i)) != 0)
         { queuedVoices ^= 1 << i; if (ruleVoices[i] != null) { voiceSource.clip = ruleVoices[i]; voiceSource.Play(); } return; }
     }
     public void Card0() { ToggleCard(0); }
@@ -622,6 +675,7 @@ public class DaifugoGame : MenSharpBehaviour
     public void Rule8() { ToggleRule(8); }
     public void Rule9() { ToggleRule(9); }
     public void Rule10() { ToggleRule(10); }
+    public void Rule11() { ToggleRule(11); }
     public void Bomb0() { Bomb(0); }
     public void Bomb1() { Bomb(1); }
     public void Bomb2() { Bomb(2); }
