@@ -7,7 +7,31 @@
   "minPlayers": 1,
   "maxPlayers": 5,
   "icon": "shrine",
-  "prefab": "",
   "startEvent": "StartGame",
-  "iconPath": "Images/shrine.png"
+  "iconPath": "Images/shrine.png",
+  "gameType": "gentle-omikuji",
+  "builderType": "OmikujiPackageBuilder",
+  "settings": {
+    "revealSound": "Audio/fortune.wav",
+    "messages": [
+      "小さな一歩も、ちゃんと前進。\n今日は自分のペースでいこう。",
+      "ひと休みしたら、新しい景色。\nのんびりする時間も大切に。",
+      "あなたのひと言が、だれかの笑顔に。\nやさしさがふわりと広がりそう。",
+      "好きなことを、ひとつ楽しもう。\nそれだけで素敵な一日。",
+      "できたことを、ひとつ数えてみよう。\n昨日の自分にも拍手を。",
+      "迷ったときは、深呼吸。\n小さな楽しみが見つかりそう。",
+      "いつもの景色にも、小さな発見。\n今日は少しだけ顔を上げて。",
+      "がんばる日も、休む日も。\nどちらのあなたも大切です。"
+    ],
+    "luckyItems": [
+      "あたたかいお茶",
+      "お気に入りの音楽",
+      "ふわふわのタオル",
+      "好きな色の小物",
+      "小さなおやつ",
+      "窓辺の光",
+      "お気に入りの本",
+      "やわらかなクッション"
+    ]
+  }
 }

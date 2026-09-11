@@ -1,4 +1,4 @@
-﻿# ゲームパッケージ
+# ゲームパッケージ
 
 ゲーム名のフォルダーを `Assets/GameSelect/Packages/` に入れると自動インストールされます。フォルダーを削除するか、Assets外へ移すとアンインストールされます。Unityのコンパイル・インポート完了後、シーンを保存してください。再生中の変更は停止後に反映します。
 
@@ -6,7 +6,7 @@
 
 ```text
 Assets/GameSelect/Packages/
-├─ CookieClicker/
+├─ SnackAtelier/
 │  ├─ game.json                          名前・アイコン・ルール・効果音設定
 │  ├─ Runtime/
 │  │  ├─ CookieClickerGame.cs             MenSharpゲーム本体
@@ -17,7 +17,7 @@ Assets/GameSelect/Packages/
 │  ├─ Audio/click.wav, purchase.wav       ゲーム用効果音
 │  └─ README.md
 ├─ Daifugo/game.json, Images/, Audio/    現在は選択項目のみ
-└─ Omikuji/game.json, Images/, Audio/    現在は選択項目のみ
+└─ Omikuji/game.json, Runtime/, Editor/, Images/, Audio/  おみくじ本体
 ```
 
 移動・配布時は **.metaも含めてフォルダー全体** を扱ってください。MenSharp / VRChat SDK / 共通ゲーム選択画面はホスト側の前提です。日本語フォントは共通の `GameSelect/Fonts` を使用します。
@@ -33,9 +33,9 @@ Assets/GameSelect/Packages/
 
 共通の選択画面はゲーム固有クラスを直接参照しません。ゲームフォルダーを削除しても、共通側に参照エラーを残さない構成です。不正JSON・重複id・不足した素材はエラーにして、最後に使えた一覧を維持します。
 
-## クッキークリッカー
+## おやつ工房
 
-クッキーのクリックで生産、厚焼きレシピでクリック強化、オーブン・ベーカリー・工房で自動生産。購入価格は購入ごとに上昇し、所持数不足の購入ボタンは無効です。クリックと購入には効果音があります。
+クッキーのクリックで生産、手づくりの型でクリック強化、オーブン・ベーカリー・工房で自動生産。購入価格は購入ごとに上昇し、所持数不足の購入ボタンは無効です。クリックと購入には効果音があります。
 
 「ゲーム選択へ」で戻れます。同じプレイセッション中は進行を保持し、ゲームを閉じている間は生産を停止します。各プレイヤーのローカルゲームで、同期・永続保存・オフライン生産はありません。ClientSimではClose Menuの後、Tabを押しながらマウスで操作します。
 
@@ -61,3 +61,5 @@ RuntimeのasmdefがMenSharp.Runtimeを参照するため、MenSharpがゲーム�
 ## 4モニター構成
 
 GameRoom.prefabでは起動・終了をルーム共通にします。ゲーム側のsessionControllerフィールドを自動接続します。詳しくは[ROOM.md](ROOM.md)を参照してください。ゲーム内部の得点・手札は今回の同期対象外です。
+
+選択画面左下の時計は端末のローカル時刻（HH:mm）を1秒ごとに更新します。時刻はネットワーク同期しません。

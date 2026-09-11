@@ -1,37 +1,37 @@
 {
   "schemaVersion": 1,
-  "id": "cookie-clicker",
-  "title": "クッキークリッカー",
+  "id": "snack-atelier",
+  "title": "おやつ工房",
   "category": "CLICKER / LOCAL",
   "order": 10,
   "minPlayers": 1,
   "maxPlayers": 1,
   "icon": "cookie",
-  "gameType": "cookie-clicker",
+  "gameType": "snack-atelier",
   "clicker": {
     "initialClickPower": 1,
     "costMultiplier": 1.18,
     "upgrades": [
       {
-        "name": "厚焼きレシピ",
+        "name": "手づくりの型",
         "cost": 15,
         "clickGain": 1,
         "productionGain": 0
       },
       {
-        "name": "小さなオーブン",
+        "name": "卓上オーブン",
         "cost": 25,
         "clickGain": 0,
         "productionGain": 1
       },
       {
-        "name": "ベーカリー",
+        "name": "木漏れ日キッチン",
         "cost": 150,
         "clickGain": 0,
         "productionGain": 8
       },
       {
-        "name": "クッキー工房",
+        "name": "街角のおやつ工房",
         "cost": 1000,
         "clickGain": 0,
         "productionGain": 50

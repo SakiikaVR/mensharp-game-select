@@ -1993,7 +1993,7 @@ MonoBehaviour:
     \"UInt32\", \"value\": \"28\"},\n    {\"name\": \"__exception_pending\", \"kind\":
     \"Boolean\", \"value\": \"false\"},\n    {\"name\": \"__const_0_SystemInt32\",
     \"kind\": \"Int32\", \"value\": \"5\"},\n    {\"name\": \"__const_1_SystemString\",
-    \"kind\": \"String\", \"value\": \"\\n   at CookieClickerGame.Start in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:28:36\"},\n   
+    \"kind\": \"String\", \"value\": \"\\n   at CookieClickerGame.Start in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:28:36\"},\n   
     {\"name\": \"__const_2_SystemBoolean\", \"kind\": \"Boolean\", \"value\": \"true\"},\n   
     {\"name\": \"__const_3_SystemInt32\", \"kind\": \"Int32\", \"value\": \"0\"},\n   
     {\"name\": \"__const_5_SystemInt32\", \"kind\": \"Int32\", \"value\": \"6\"},\n   
@@ -2003,142 +2003,143 @@ MonoBehaviour:
     {\"name\": \"fn_System_NullReferenceException__ctor_ctor_11__return\", \"kind\":
     \"UInt32\", \"value\": \"0\"},\n    {\"name\": \"__retaddr_19\", \"kind\": \"UInt32\",
     \"value\": \"648\"},\n    {\"name\": \"__const_9_SystemString\", \"kind\": \"String\",
-    \"value\": \"\\n   at CookieClickerGame.StartGame in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:38:72\"},\n   
+    \"value\": \"\\n   at CookieClickerGame.StartGame in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:38:72\"},\n   
     {\"name\": \"__const_10_SystemInt32\", \"kind\": \"Int32\", \"value\": \"4\"},\n   
     {\"name\": \"__const_11_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.StartGame
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:38:72\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:38:72\"},\n   
     {\"name\": \"__const_13_SystemString\", \"kind\": \"String\", \"value\": \"System.IndexOutOfRangeException\"},\n   
     {\"name\": \"fn_System_IndexOutOfRangeException__ctor_ctor_12__return\", \"kind\":
     \"UInt32\", \"value\": \"0\"},\n    {\"name\": \"__retaddr_27\", \"kind\": \"UInt32\",
     \"value\": \"1144\"},\n    {\"name\": \"__retaddr_33\", \"kind\": \"UInt32\",
     \"value\": \"1592\"},\n    {\"name\": \"__const_14_SystemString\", \"kind\":
-    \"String\", \"value\": \"\\n   at CookieClickerGame.StartGame in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:38:52\"},\n   
+    \"String\", \"value\": \"\\n   at CookieClickerGame.StartGame in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:38:52\"},\n   
     {\"name\": \"__const_15_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.StartGame
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:38:52\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:38:52\"},\n   
     {\"name\": \"__retaddr_37\", \"kind\": \"UInt32\", \"value\": \"2088\"},\n   
     {\"name\": \"__const_16_SystemInt32\", \"kind\": \"Int32\", \"value\": \"1\"},\n   
-    {\"name\": \"__const_17_SystemString\", \"kind\": \"String\", \"value\": \"\u30AF\u30C3\u30AD\u30FC\u3092\u30AF\u30EA\u30C3\u30AF\u3057\u3066\u713C\u3053\u3046\uFF01\"},\n   
+    {\"name\": \"__const_17_SystemString\", \"kind\": \"String\", \"value\": \"\u30BF\u30C3\u30D7\u3057\u3066\u3001\u304A\u3084\u3064\u3092\u713C\u3053\u3046\uFF01\"},\n   
     {\"name\": \"__retaddr_40\", \"kind\": \"UInt32\", \"value\": \"2492\"},\n   
     {\"name\": \"__const_18_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.StartGame in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:41:23\"},\n   
+    at CookieClickerGame.StartGame in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:41:23\"},\n   
     {\"name\": \"__retaddr_45\", \"kind\": \"UInt32\", \"value\": \"2688\"},\n   
     {\"name\": \"__const_19_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.Bake in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:46:36\"},\n   
+    at CookieClickerGame.Bake in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:46:36\"},\n   
     {\"name\": \"__const_20_SystemSingle\", \"kind\": \"Single\", \"value\": \"1.0\"},\n   
     {\"name\": \"__const_21_SystemString\", \"kind\": \"String\", \"value\": \"+
     \"},\n    {\"name\": \"fn_CookieClickerGame_Format_13__return\", \"kind\": \"UInt32\",
     \"value\": \"0\"},\n    {\"name\": \"__retaddr_51\", \"kind\": \"UInt32\", \"value\":
     \"3048\"},\n    {\"name\": \"__const_22_SystemString\", \"kind\": \"String\",
-    \"value\": \"\\n   at CookieClickerGame.Bake in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:50:43\"},\n   
-    {\"name\": \"__const_23_SystemString\", \"kind\": \"String\", \"value\": \" cookies\"},\n   
+    \"value\": \"\\n   at CookieClickerGame.Bake in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:50:43\"},\n   
+    {\"name\": \"__const_23_SystemString\", \"kind\": \"String\", \"value\": \" \u500B\u3067\u304D\u307E\u3057\u305F\"},\n   
     {\"name\": \"__retaddr_61\", \"kind\": \"UInt32\", \"value\": \"3480\"},\n   
     {\"name\": \"__const_24_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.Bake in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:52:23\"},\n   
+    at CookieClickerGame.Bake in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:52:23\"},\n   
     {\"name\": \"fn_CookieClickerGame_Buy_14__return\", \"kind\": \"UInt32\", \"value\":
     \"0\"},\n    {\"name\": \"__retaddr_63\", \"kind\": \"UInt32\", \"value\": \"3656\"},\n   
     {\"name\": \"__const_25_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.BuyFirst in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:54:33\"},\n   
+    at CookieClickerGame.BuyFirst in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:54:33\"},\n   
     {\"name\": \"__retaddr_67\", \"kind\": \"UInt32\", \"value\": \"3832\"},\n   
     {\"name\": \"__const_26_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.BuySecond in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:55:34\"},\n   
+    at CookieClickerGame.BuySecond in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:55:34\"},\n   
     {\"name\": \"__retaddr_71\", \"kind\": \"UInt32\", \"value\": \"4008\"},\n   
     {\"name\": \"__const_27_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.BuyThird in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:56:33\"},\n   
+    at CookieClickerGame.BuyThird in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:56:33\"},\n   
     {\"name\": \"__retaddr_75\", \"kind\": \"UInt32\", \"value\": \"4184\"},\n   
     {\"name\": \"__const_28_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.BuyFourth in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:57:34\"},\n   
+    at CookieClickerGame.BuyFourth in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:57:34\"},\n   
     {\"name\": \"__const_29_SystemSingle\", \"kind\": \"Single\", \"value\": \"0.075\"},\n   
     {\"name\": \"__const_30_SystemSingle\", \"kind\": \"Single\", \"value\": \"0.1\"},\n   
     {\"name\": \"__const_31_SystemSingle\", \"kind\": \"Single\", \"value\": \"0.0\"},\n   
     {\"name\": \"__retaddr_91\", \"kind\": \"UInt32\", \"value\": \"5080\"},\n   
     {\"name\": \"__const_32_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.Update in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:79:68\"},\n   
+    at CookieClickerGame.Update in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:79:68\"},\n   
     {\"name\": \"__const_33_VRCUdonCommonInterfacesNetworkEventTarget\", \"kind\":
     \"Enum\", \"value\": \"VRC.Udon.Common.Interfaces.NetworkEventTarget#1\"},\n   
     {\"name\": \"__const_34_SystemString\", \"kind\": \"String\", \"value\": \"RequestClose\"},\n   
     {\"name\": \"__const_35_SystemBoolean\", \"kind\": \"Boolean\", \"value\": \"false\"},\n   
     {\"name\": \"__retaddr_98\", \"kind\": \"UInt32\", \"value\": \"5404\"},\n   
     {\"name\": \"__const_36_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:96:35\"},\n   
+    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:96:35\"},\n   
     {\"name\": \"__retaddr_104\", \"kind\": \"UInt32\", \"value\": \"5636\"},\n   
     {\"name\": \"__const_37_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:97:32\"},\n   
+    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:97:32\"},\n   
     {\"name\": \"__const_38_SystemString\", \"kind\": \"String\", \"value\": \" /
     CLICK     \xB7     \"},\n    {\"name\": \"__retaddr_106\", \"kind\": \"UInt32\",
     \"value\": \"5856\"},\n    {\"name\": \"__const_39_SystemString\", \"kind\":
-    \"String\", \"value\": \"\\n   at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:97:77\"},\n   
+    \"String\", \"value\": \"\\n   at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:97:77\"},\n   
     {\"name\": \"__const_40_SystemString\", \"kind\": \"String\", \"value\": \" /
     SEC\"},\n    {\"name\": \"__const_41_SystemString\", \"kind\": \"String\", \"value\":
-    \"TOTAL BAKED  \"},\n    {\"name\": \"__retaddr_110\", \"kind\": \"UInt32\",
-    \"value\": \"6152\"},\n    {\"name\": \"__const_42_SystemString\", \"kind\":
-    \"String\", \"value\": \"\\n   at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:98:51\"},\n   
+    \"\u3053\u308C\u307E\u3067\u306E\u713C\u304D\u4E0A\u304C\u308A  \"},\n    {\"name\":
+    \"__retaddr_110\", \"kind\": \"UInt32\", \"value\": \"6152\"},\n    {\"name\":
+    \"__const_42_SystemString\", \"kind\": \"String\", \"value\": \"\\n   at CookieClickerGame.RefreshDisplay
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:98:50\"},\n   
     {\"name\": \"__retaddr_122\", \"kind\": \"UInt32\", \"value\": \"6624\"},\n   
     {\"name\": \"__const_43_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:101:23\"},\n   
+    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:101:23\"},\n   
     {\"name\": \"__const_44_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.RefreshDisplay
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:101:23\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:101:23\"},\n   
     {\"name\": \"__retaddr_128\", \"kind\": \"UInt32\", \"value\": \"7120\"},\n   
     {\"name\": \"__retaddr_133\", \"kind\": \"UInt32\", \"value\": \"7568\"},\n   
     {\"name\": \"__const_45_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:101:46\"},\n   
+    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:101:46\"},\n   
     {\"name\": \"__const_46_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.RefreshDisplay
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:101:46\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:101:46\"},\n   
     {\"name\": \"__retaddr_142\", \"kind\": \"UInt32\", \"value\": \"8064\"},\n   
     {\"name\": \"__const_47_SystemString\", \"kind\": \"String\", \"value\": \"  
     \xD7\"},\n    {\"name\": \"__retaddr_148\", \"kind\": \"UInt32\", \"value\":
     \"8544\"},\n    {\"name\": \"__const_48_SystemString\", \"kind\": \"String\",
-    \"value\": \"\\n   at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:101:66\"},\n   
+    \"value\": \"\\n   at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:101:66\"},\n   
     {\"name\": \"__const_49_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.RefreshDisplay
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:101:66\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:101:66\"},\n   
     {\"name\": \"__retaddr_152\", \"kind\": \"UInt32\", \"value\": \"9040\"},\n   
     {\"name\": \"__const_50_SystemString\", \"kind\": \"String\", \"value\": \"\\n\"},\n   
     {\"name\": \"__retaddr_159\", \"kind\": \"UInt32\", \"value\": \"9576\"},\n   
     {\"name\": \"__const_51_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:102:37\"},\n   
+    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:102:37\"},\n   
     {\"name\": \"__const_52_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.RefreshDisplay
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:102:37\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:102:37\"},\n   
     {\"name\": \"__retaddr_163\", \"kind\": \"UInt32\", \"value\": \"10072\"},\n   
     {\"name\": \"__const_53_SystemString\", \"kind\": \"String\", \"value\": \"+\"},\n   
     {\"name\": \"__retaddr_168\", \"kind\": \"UInt32\", \"value\": \"10592\"},\n   
     {\"name\": \"__const_54_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:102:70\"},\n   
+    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:102:70\"},\n   
     {\"name\": \"__const_55_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.RefreshDisplay
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:102:70\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:102:70\"},\n   
     {\"name\": \"__retaddr_173\", \"kind\": \"UInt32\", \"value\": \"11088\"},\n   
     {\"name\": \"__retaddr_175\", \"kind\": \"UInt32\", \"value\": \"11400\"},\n   
     {\"name\": \"__const_56_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:102:59\"},\n   
+    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:102:59\"},\n   
     {\"name\": \"__const_57_SystemString\", \"kind\": \"String\", \"value\": \" /
     CLICK\"},\n    {\"name\": \"__retaddr_178\", \"kind\": \"UInt32\", \"value\":
     \"11816\"},\n    {\"name\": \"__const_58_SystemString\", \"kind\": \"String\",
-    \"value\": \"\\n   at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:102:118\"},\n   
+    \"value\": \"\\n   at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:102:118\"},\n   
     {\"name\": \"__const_59_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.RefreshDisplay
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:102:118\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:102:118\"},\n   
     {\"name\": \"__retaddr_182\", \"kind\": \"UInt32\", \"value\": \"12312\"},\n   
     {\"name\": \"__retaddr_185\", \"kind\": \"UInt32\", \"value\": \"12624\"},\n   
     {\"name\": \"__const_60_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:102:102\"},\n   
+    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:102:102\"},\n   
     {\"name\": \"__const_61_SystemString\", \"kind\": \"String\", \"value\": \"    
     COST  \"},\n    {\"name\": \"__retaddr_188\", \"kind\": \"UInt32\", \"value\":
     \"13096\"},\n    {\"name\": \"__const_62_SystemString\", \"kind\": \"String\",
-    \"value\": \"\\n   at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:103:47\"},\n   
+    \"value\": \"\\n   at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:103:47\"},\n   
     {\"name\": \"__const_63_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.RefreshDisplay
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:103:47\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:103:47\"},\n   
     {\"name\": \"__retaddr_192\", \"kind\": \"UInt32\", \"value\": \"13592\"},\n   
     {\"name\": \"__retaddr_194\", \"kind\": \"UInt32\", \"value\": \"13904\"},\n   
     {\"name\": \"__const_64_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:103:41\"},\n   
+    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:103:41\"},\n   
     {\"name\": \"__retaddr_197\", \"kind\": \"UInt32\", \"value\": \"14284\"},\n   
     {\"name\": \"__const_65_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:104:24\"},\n   
+    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:104:24\"},\n   
     {\"name\": \"__const_66_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.RefreshDisplay
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:104:24\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:104:24\"},\n   
     {\"name\": \"__retaddr_201\", \"kind\": \"UInt32\", \"value\": \"14780\"},\n   
     {\"name\": \"__retaddr_205\", \"kind\": \"UInt32\", \"value\": \"15228\"},\n   
     {\"name\": \"__const_67_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:104:59\"},\n   
+    at CookieClickerGame.RefreshDisplay in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:104:59\"},\n   
     {\"name\": \"__const_68_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.RefreshDisplay
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:104:59\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:104:59\"},\n   
     {\"name\": \"__retaddr_209\", \"kind\": \"UInt32\", \"value\": \"15724\"},\n   
     {\"name\": \"__const_69_SystemString\", \"kind\": \"String\", \"value\": \"\"},\n   
     {\"name\": \"fn__object_ToString_15__return\", \"kind\": \"UInt32\", \"value\":
@@ -2164,58 +2165,58 @@ MonoBehaviour:
     \"kind\": \"String\", \"value\": \" K\"},\n    {\"name\": \"__const_82_SystemString\",
     \"kind\": \"String\", \"value\": \"F0\"},\n    {\"name\": \"__retaddr_250\",
     \"kind\": \"UInt32\", \"value\": \"17876\"},\n    {\"name\": \"__const_83_SystemString\",
-    \"kind\": \"String\", \"value\": \"\\n   at CookieClickerGame.Buy in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:60:69\"},\n   
+    \"kind\": \"String\", \"value\": \"\\n   at CookieClickerGame.Buy in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:60:69\"},\n   
     {\"name\": \"__const_84_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.Buy
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:60:69\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:60:69\"},\n   
     {\"name\": \"__retaddr_258\", \"kind\": \"UInt32\", \"value\": \"18372\"},\n   
     {\"name\": \"__retaddr_266\", \"kind\": \"UInt32\", \"value\": \"18932\"},\n   
     {\"name\": \"__const_85_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.Buy in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:61:25\"},\n   
+    at CookieClickerGame.Buy in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:61:25\"},\n   
     {\"name\": \"__const_86_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.Buy
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:61:25\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:61:25\"},\n   
     {\"name\": \"__retaddr_270\", \"kind\": \"UInt32\", \"value\": \"19428\"},\n   
     {\"name\": \"__retaddr_275\", \"kind\": \"UInt32\", \"value\": \"19928\"},\n   
     {\"name\": \"__const_87_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.Buy in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:62:21\"},\n   
+    at CookieClickerGame.Buy in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:62:21\"},\n   
     {\"name\": \"__const_88_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.Buy
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:62:21\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:62:21\"},\n   
     {\"name\": \"__retaddr_279\", \"kind\": \"UInt32\", \"value\": \"20424\"},\n   
     {\"name\": \"__retaddr_286\", \"kind\": \"UInt32\", \"value\": \"20924\"},\n   
     {\"name\": \"__retaddr_294\", \"kind\": \"UInt32\", \"value\": \"21420\"},\n   
     {\"name\": \"__retaddr_299\", \"kind\": \"UInt32\", \"value\": \"21888\"},\n   
     {\"name\": \"__const_89_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.Buy in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:63:33\"},\n   
+    at CookieClickerGame.Buy in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:63:33\"},\n   
     {\"name\": \"__const_90_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.Buy
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:63:33\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:63:33\"},\n   
     {\"name\": \"__retaddr_303\", \"kind\": \"UInt32\", \"value\": \"22384\"},\n   
     {\"name\": \"__retaddr_306\", \"kind\": \"UInt32\", \"value\": \"22904\"},\n   
     {\"name\": \"__const_91_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.Buy in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:64:38\"},\n   
+    at CookieClickerGame.Buy in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:64:38\"},\n   
     {\"name\": \"__const_92_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.Buy
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:64:38\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:64:38\"},\n   
     {\"name\": \"__retaddr_310\", \"kind\": \"UInt32\", \"value\": \"23400\"},\n   
     {\"name\": \"__retaddr_313\", \"kind\": \"UInt32\", \"value\": \"23900\"},\n   
     {\"name\": \"__const_93_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.Buy in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:65:40\"},\n   
+    at CookieClickerGame.Buy in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:65:40\"},\n   
     {\"name\": \"__const_94_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.Buy
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:65:40\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:65:40\"},\n   
     {\"name\": \"__retaddr_317\", \"kind\": \"UInt32\", \"value\": \"24396\"},\n   
     {\"name\": \"__retaddr_320\", \"kind\": \"UInt32\", \"value\": \"24900\"},\n   
     {\"name\": \"__const_95_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.Buy in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:65:9\"},\n   
+    at CookieClickerGame.Buy in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:65:9\"},\n   
     {\"name\": \"__const_96_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.Buy
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:65:9\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:65:9\"},\n   
     {\"name\": \"__retaddr_324\", \"kind\": \"UInt32\", \"value\": \"25396\"},\n   
     {\"name\": \"__retaddr_327\", \"kind\": \"UInt32\", \"value\": \"25844\"},\n   
     {\"name\": \"__const_97_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.Buy in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:66:42\"},\n   
+    at CookieClickerGame.Buy in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:66:42\"},\n   
     {\"name\": \"__const_98_SystemString\", \"kind\": \"String\", \"value\": \"CookieClickerGame.Buy
-    in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:66:42\"},\n   
+    in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:66:42\"},\n   
     {\"name\": \"__retaddr_331\", \"kind\": \"UInt32\", \"value\": \"26340\"},\n   
     {\"name\": \"__const_99_SystemString\", \"kind\": \"String\", \"value\": \" \u3092\u8CFC\u5165\u3057\u307E\u3057\u305F\"},\n   
     {\"name\": \"__retaddr_337\", \"kind\": \"UInt32\", \"value\": \"26864\"},\n   
     {\"name\": \"__const_100_SystemString\", \"kind\": \"String\", \"value\": \"\\n  
-    at CookieClickerGame.Buy in Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs:68:23\"},\n   
+    at CookieClickerGame.Buy in Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs:68:23\"},\n   
     {\"name\": \"fn_System_Exception__ctor_ctor_17__return\", \"kind\": \"UInt32\",
     \"value\": \"0\"},\n    {\"name\": \"__retaddr_339\", \"kind\": \"UInt32\", \"value\":
     \"27060\"},\n    {\"name\": \"__const_101_SystemString\", \"kind\": \"String\",
@@ -2288,240 +2289,240 @@ MonoBehaviour:
     \"kind\": \"UInt32\", \"value\": \"4294967292\"}\n  ],\n  \"entryPoints\": [\"_start\",
     \"StartGame\", \"Bake\", \"BuyFirst\", \"BuySecond\", \"BuyThird\", \"BuyFourth\",
     \"_update\", \"BackToMenu\", \"RefreshDisplay\"],\n  \"syncMode\": \"none\",\n 
-    \"source\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",\n 
+    \"source\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",\n 
     \"programId\": 1181336829749781496,\n  \"lines\": [\n    {\"address\": 0, \"file\":
     \"\", \"line\": 0, \"column\": 0, \"function\": \"CookieClickerGame.Start\",
-    \"kind\": \"function\"},\n    {\"address\": 0, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    \"kind\": \"function\"},\n    {\"address\": 0, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 28, \"column\": 27, \"function\": \"CookieClickerGame.Start\"},\n   
     {\"address\": 156, \"file\": \"\", \"line\": 0, \"column\": 0, \"function\":
     \"CookieClickerGame.StartGame\", \"kind\": \"function\"},\n    {\"address\":
-    156, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    156, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 32, \"column\": 9, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 156, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 156, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 32, \"column\": 13, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 196, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 196, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 33, \"column\": 9, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 196, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 196, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 34, \"column\": 13, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 216, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 216, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 35, \"column\": 13, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 236, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 236, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 36, \"column\": 13, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 236, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 236, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 36, \"column\": 38, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 260, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 260, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 36, \"column\": 21, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 304, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 304, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 37, \"column\": 13, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 304, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 304, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 37, \"column\": 40, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 328, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 328, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 37, \"column\": 21, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 372, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 372, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 38, \"column\": 13, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 392, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 392, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 38, \"column\": 38, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 416, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 416, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 38, \"column\": 29, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 464, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 464, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 38, \"column\": 52, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 464, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 464, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 38, \"column\": 72, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 1408, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 1408, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 38, \"column\": 52, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 2372, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 2372, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 38, \"column\": 48, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 2440, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 2440, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 40, \"column\": 9, \"function\": \"CookieClickerGame.StartGame\"},\n   
-    {\"address\": 2464, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 2464, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 41, \"column\": 9, \"function\": \"CookieClickerGame.StartGame\"},\n   
     {\"address\": 2620, \"file\": \"\", \"line\": 0, \"column\": 0, \"function\":
     \"CookieClickerGame.Bake\", \"kind\": \"function\"},\n    {\"address\": 2620,
-    \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 46, \"column\": 9, \"function\": \"CookieClickerGame.Bake\"},\n   
-    {\"address\": 2620, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 2620, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 46, \"column\": 13, \"function\": \"CookieClickerGame.Bake\"},\n   
-    {\"address\": 2660, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 2660, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 46, \"column\": 27, \"function\": \"CookieClickerGame.Bake\"},\n   
-    {\"address\": 2816, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 2816, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 47, \"column\": 9, \"function\": \"CookieClickerGame.Bake\"},\n   
-    {\"address\": 2888, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 2888, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 48, \"column\": 9, \"function\": \"CookieClickerGame.Bake\"},\n   
-    {\"address\": 2960, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 2960, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 49, \"column\": 9, \"function\": \"CookieClickerGame.Bake\"},\n   
-    {\"address\": 2980, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 2980, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 50, \"column\": 9, \"function\": \"CookieClickerGame.Bake\"},\n   
-    {\"address\": 3188, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 3188, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 50, \"column\": 30, \"function\": \"CookieClickerGame.Bake\"},\n   
-    {\"address\": 3252, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 3252, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 50, \"column\": 9, \"function\": \"CookieClickerGame.Bake\"},\n   
-    {\"address\": 3276, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 3276, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 51, \"column\": 9, \"function\": \"CookieClickerGame.Bake\"},\n   
-    {\"address\": 3276, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 3276, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 51, \"column\": 13, \"function\": \"CookieClickerGame.Bake\"},\n   
-    {\"address\": 3344, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 3344, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 51, \"column\": 30, \"function\": \"CookieClickerGame.Bake\"},\n   
-    {\"address\": 3420, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 3420, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 51, \"column\": 50, \"function\": \"CookieClickerGame.Bake\"},\n   
-    {\"address\": 3420, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 3420, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 51, \"column\": 67, \"function\": \"CookieClickerGame.Bake\"},\n   
-    {\"address\": 3452, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 3452, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 52, \"column\": 9, \"function\": \"CookieClickerGame.Bake\"},\n   
     {\"address\": 3608, \"file\": \"\", \"line\": 0, \"column\": 0, \"function\":
     \"CookieClickerGame.BuyFirst\", \"kind\": \"function\"},\n    {\"address\": 3608,
-    \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 54, \"column\": 30, \"function\": \"CookieClickerGame.BuyFirst\"},\n   
     {\"address\": 3784, \"file\": \"\", \"line\": 0, \"column\": 0, \"function\":
     \"CookieClickerGame.BuySecond\", \"kind\": \"function\"},\n    {\"address\":
-    3784, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    3784, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 55, \"column\": 31, \"function\": \"CookieClickerGame.BuySecond\"},\n   
     {\"address\": 3960, \"file\": \"\", \"line\": 0, \"column\": 0, \"function\":
     \"CookieClickerGame.BuyThird\", \"kind\": \"function\"},\n    {\"address\": 3960,
-    \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 56, \"column\": 30, \"function\": \"CookieClickerGame.BuyThird\"},\n   
     {\"address\": 4136, \"file\": \"\", \"line\": 0, \"column\": 0, \"function\":
     \"CookieClickerGame.BuyFourth\", \"kind\": \"function\"},\n    {\"address\":
-    4136, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    4136, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 57, \"column\": 31, \"function\": \"CookieClickerGame.BuyFourth\"},\n   
     {\"address\": 4312, \"file\": \"\", \"line\": 0, \"column\": 0, \"function\":
     \"CookieClickerGame.Update\", \"kind\": \"function\"},\n    {\"address\": 4312,
-    \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 72, \"column\": 9, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4312, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4312, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 72, \"column\": 13, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4352, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4352, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 72, \"column\": 27, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4368, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4368, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 73, \"column\": 9, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4368, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4368, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 73, \"column\": 41, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4384, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4384, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 73, \"column\": 24, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4436, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4436, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 74, \"column\": 9, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4508, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4508, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 75, \"column\": 9, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4580, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4580, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 76, \"column\": 9, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4580, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4580, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 76, \"column\": 42, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4604, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4604, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 76, \"column\": 49, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4620, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4620, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 76, \"column\": 45, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4676, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4676, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 76, \"column\": 34, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4736, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4736, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 77, \"column\": 9, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4736, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4736, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 77, \"column\": 36, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4752, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4752, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 77, \"column\": 48, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4784, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4784, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 77, \"column\": 44, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4840, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4840, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 77, \"column\": 29, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4872, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4872, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 77, \"column\": 9, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4896, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4896, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 78, \"column\": 9, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4916, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4916, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 78, \"column\": 28, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4932, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4932, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 78, \"column\": 9, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4984, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4984, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 79, \"column\": 9, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 4984, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 4984, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 79, \"column\": 13, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 5032, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 5032, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 79, \"column\": 34, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 5032, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 5032, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 79, \"column\": 36, \"function\": \"CookieClickerGame.Update\"},\n   
-    {\"address\": 5052, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 5052, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 79, \"column\": 54, \"function\": \"CookieClickerGame.Update\"},\n   
     {\"address\": 5216, \"file\": \"\", \"line\": 0, \"column\": 0, \"function\":
     \"CookieClickerGame.BackToMenu\", \"kind\": \"function\"},\n    {\"address\":
-    5216, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    5216, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 83, \"column\": 9, \"function\": \"CookieClickerGame.BackToMenu\"},\n   
-    {\"address\": 5216, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 5216, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 83, \"column\": 13, \"function\": \"CookieClickerGame.BackToMenu\"},\n   
-    {\"address\": 5264, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 5264, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 84, \"column\": 13, \"function\": \"CookieClickerGame.BackToMenu\"},\n   
-    {\"address\": 5264, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 5264, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 84, \"column\": 53, \"function\": \"CookieClickerGame.BackToMenu\"},\n   
-    {\"address\": 5304, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 5304, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 85, \"column\": 14, \"function\": \"CookieClickerGame.BackToMenu\"},\n   
-    {\"address\": 5304, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 5304, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 85, \"column\": 34, \"function\": \"CookieClickerGame.BackToMenu\"},\n   
     {\"address\": 5336, \"file\": \"\", \"line\": 0, \"column\": 0, \"function\":
     \"CookieClickerGame.RefreshDisplay\", \"kind\": \"function\"},\n    {\"address\":
-    5336, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    5336, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 96, \"column\": 9, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 5568, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 5568, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 97, \"column\": 9, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 5776, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 5776, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 97, \"column\": 26, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 6060, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 6060, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 97, \"column\": 9, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 6084, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 6084, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 98, \"column\": 9, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 6292, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 6292, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 98, \"column\": 27, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 6324, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 6324, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 98, \"column\": 9, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 6348, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 6348, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 99, \"column\": 9, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 6368, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 6368, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 99, \"column\": 34, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 6392, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 6392, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 99, \"column\": 25, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 6440, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 6440, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 100, \"column\": 9, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 6440, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 6440, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 101, \"column\": 13, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 6440, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 6440, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 101, \"column\": 23, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 7384, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 7384, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 101, \"column\": 46, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 8328, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 8328, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 101, \"column\": 34, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 8360, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 8360, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 101, \"column\": 66, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 9304, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 9304, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 101, \"column\": 78, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 9328, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 9328, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 101, \"column\": 34, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 9392, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 9392, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 102, \"column\": 37, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 10336, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 10336, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 102, \"column\": 27, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 10408, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 10408, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 102, \"column\": 70, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 11540, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 11540, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 102, \"column\": 47, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 11632, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 11632, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 102, \"column\": 118, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 12764, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 12764, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 102, \"column\": 90, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 12848, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 12848, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 101, \"column\": 34, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 12912, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 12912, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 103, \"column\": 47, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 14044, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 14044, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 101, \"column\": 34, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 14076, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 14076, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 101, \"column\": 13, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 14100, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 14100, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 104, \"column\": 13, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 14100, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 14100, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 104, \"column\": 24, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 15044, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 15044, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 104, \"column\": 59, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 15988, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 15988, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 104, \"column\": 43, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 16020, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 16020, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 104, \"column\": 13, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
-    {\"address\": 16064, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 16064, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 99, \"column\": 44, \"function\": \"CookieClickerGame.RefreshDisplay\"},\n   
     {\"address\": 16132, \"file\": \"\", \"line\": 0, \"column\": 0, \"function\":
     \"the unhandled exception report\", \"kind\": \"function\"},\n    {\"address\":
@@ -2532,117 +2533,117 @@ MonoBehaviour:
     0, \"column\": 0, \"function\": \"System.IndexOutOfRangeException.IndexOutOfRangeException\",
     \"kind\": \"function\"},\n    {\"address\": 16832, \"file\": \"\", \"line\":
     0, \"column\": 0, \"function\": \"CookieClickerGame.Format\", \"kind\": \"function\"},\n   
-    {\"address\": 16832, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 16832, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 89, \"column\": 9, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 16832, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 16832, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 89, \"column\": 13, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 16880, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 16880, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 89, \"column\": 35, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 16880, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 16880, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 89, \"column\": 43, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 16912, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 16912, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 89, \"column\": 72, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 16944, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 16944, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 89, \"column\": 42, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 17012, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17012, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 90, \"column\": 9, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 17012, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17012, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 90, \"column\": 13, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 17060, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17060, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 90, \"column\": 32, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 17060, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17060, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 90, \"column\": 40, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 17092, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17092, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 90, \"column\": 66, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 17124, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17124, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 90, \"column\": 39, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 17192, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17192, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 91, \"column\": 9, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 17192, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17192, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 91, \"column\": 13, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 17240, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17240, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 91, \"column\": 29, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 17240, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17240, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 91, \"column\": 37, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 17272, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17272, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 91, \"column\": 60, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 17304, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17304, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 91, \"column\": 36, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 17372, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17372, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 92, \"column\": 9, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 17372, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17372, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 92, \"column\": 27, \"function\": \"CookieClickerGame.Format\"},\n   
-    {\"address\": 17396, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17396, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 92, \"column\": 43, \"function\": \"CookieClickerGame.Format\"},\n   
     {\"address\": 17464, \"file\": \"\", \"line\": 0, \"column\": 0, \"function\":
     \"CookieClickerGame.Buy\", \"kind\": \"function\"},\n    {\"address\": 17464,
-    \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 60, \"column\": 9, \"function\": \"CookieClickerGame.Buy\"},\n    {\"address\":
-    17464, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    17464, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 60, \"column\": 13, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 17548, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17548, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 60, \"column\": 43, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 17572, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17572, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 60, \"column\": 29, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 17652, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17652, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 60, \"column\": 13, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 17692, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 17692, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 60, \"column\": 69, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 18636, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 18636, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 60, \"column\": 54, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 18712, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 18712, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 60, \"column\": 78, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 18728, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 18728, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 61, \"column\": 9, \"function\": \"CookieClickerGame.Buy\"},\n    {\"address\":
-    18748, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    18748, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 61, \"column\": 25, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 19692, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 19692, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 61, \"column\": 9, \"function\": \"CookieClickerGame.Buy\"},\n    {\"address\":
-    19744, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    19744, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 62, \"column\": 9, \"function\": \"CookieClickerGame.Buy\"},\n    {\"address\":
-    19744, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    19744, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 62, \"column\": 21, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 21684, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 21684, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 63, \"column\": 9, \"function\": \"CookieClickerGame.Buy\"},\n    {\"address\":
-    21704, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    21704, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 63, \"column\": 33, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 22648, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 22648, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 63, \"column\": 9, \"function\": \"CookieClickerGame.Buy\"},\n    {\"address\":
-    22700, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    22700, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 64, \"column\": 9, \"function\": \"CookieClickerGame.Buy\"},\n    {\"address\":
-    22720, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    22720, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 64, \"column\": 38, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 23664, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 23664, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 64, \"column\": 9, \"function\": \"CookieClickerGame.Buy\"},\n    {\"address\":
-    23716, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    23716, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 65, \"column\": 9, \"function\": \"CookieClickerGame.Buy\"},\n    {\"address\":
-    23716, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    23716, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 65, \"column\": 40, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 24660, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 24660, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 65, \"column\": 35, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 24692, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 24692, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 65, \"column\": 34, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 24716, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 24716, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 65, \"column\": 9, \"function\": \"CookieClickerGame.Buy\"},\n    {\"address\":
-    25660, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    25660, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 66, \"column\": 9, \"function\": \"CookieClickerGame.Buy\"},\n    {\"address\":
-    25660, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    25660, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 66, \"column\": 42, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 26604, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 26604, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 66, \"column\": 30, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 26636, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 26636, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 66, \"column\": 9, \"function\": \"CookieClickerGame.Buy\"},\n    {\"address\":
-    26660, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    26660, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 67, \"column\": 9, \"function\": \"CookieClickerGame.Buy\"},\n    {\"address\":
-    26660, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    26660, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 67, \"column\": 13, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 26728, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 26728, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 67, \"column\": 30, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 26804, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 26804, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 67, \"column\": 53, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 26804, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 26804, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 67, \"column\": 70, \"function\": \"CookieClickerGame.Buy\"},\n   
-    {\"address\": 26836, \"file\": \"Assets/GameSelect/Packages/CookieClicker/Runtime/CookieClickerGame.cs\",
+    {\"address\": 26836, \"file\": \"Assets/GameSelect/Packages/SnackAtelier/Runtime/CookieClickerGame.cs\",
     \"line\": 68, \"column\": 9, \"function\": \"CookieClickerGame.Buy\"},\n    {\"address\":
     26992, \"file\": \"\", \"line\": 0, \"column\": 0, \"function\": \"System.SystemException.SystemException\",
     \"kind\": \"function\"},\n    {\"address\": 27188, \"file\": \"\", \"line\":

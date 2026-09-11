@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.Events;
@@ -48,20 +48,20 @@ public static class ClickerPackageBuilder
         // Opaque raycast target prevents clicks leaking into the selection panel.
         var background = root.gameObject.AddComponent<Image>();
         background.color = new Color32(246,245,242,255); background.raycastTarget = true;
-        Text("Heading",root,"COOKIE ATELIER",-520,451,740,60,40);
+        Text("Heading",root,"SNACK ATELIER",-520,451,740,60,40);
         Text("Subtitle",root,package.title,-525,390,730,45,25);
         var back = Button("Back",root,710,445,340,72,"←  ゲーム選択へ");
         Image("Rule",root,0,345,1750,2,null,new Color32(205,204,199,255));
         game.balanceLabel = Text("Balance",root,"0",-445,225,830,110,88);
-        Text("Unit",root,"C O O K I E S",-445,143,650,42,23);
+        Text("Unit",root,"焼 き 上 が り",-445,143,650,42,23);
         game.rateLabel = Text("Rate",root,"1 / CLICK  ·  0 / SEC",-445,83,800,45,24);
         var cookieImage = Image("Cookie",root,-445,-155,365,365,"cookie",Color.white);
         game.cookie = cookieImage.rectTransform;
         var bake = cookieImage.gameObject.AddComponent<Button>(); bake.targetGraphic = cookieImage; cookieImage.raycastTarget = true;
         var nav = bake.navigation; nav.mode=Navigation.Mode.None; bake.navigation=nav;
-        game.feedbackLabel = Text("Feedback",root,"クッキーをクリックして焼こう！",-445,-394,850,50,27);
-        game.totalLabel = Text("Total",root,"TOTAL BAKED  0",-445,-469,850,36,20);
-        Text("ShopHeading",root,"BAKERY UPGRADES",465,273,780,60,32);
+        game.feedbackLabel = Text("Feedback",root,"タップして、おやつを焼こう！",-445,-394,850,50,27);
+        game.totalLabel = Text("Total",root,"これまでの焼き上がり  0",-445,-469,850,36,20);
+        Text("ShopHeading",root,"工房を育てる",465,273,780,60,32);
         var rules = package.clicker.ToObject<Rules>();
         game.sound = root.gameObject.AddComponent<AudioSource>();
         game.sound.playOnAwake = false; game.sound.spatialBlend = 0; game.sound.volume = 0.2f;

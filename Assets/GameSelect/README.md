@@ -1,6 +1,6 @@
-﻿# Game Select / MenSharp
+# Game Select / MenSharp
 
-クッキークリッカーを実装済みです。ゲーム名フォルダーの追加・削除による管理とゲームの仕様は [PACKAGES.md](PACKAGES.md) を参照してください。
+おやつ工房・おみくじを実装済みです。ゲーム名フォルダーの追加・削除による管理とゲームの仕様は [PACKAGES.md](PACKAGES.md) を参照してください。
 
 1920 × 1080のWorld Space Canvas。`GameSelectPanel.prefab`をワールドに配置して使います。
 現在のシーンにも配置済みです。左右の矢印・サイドカードで選択し、PLAYまたは中央カードで開始します。

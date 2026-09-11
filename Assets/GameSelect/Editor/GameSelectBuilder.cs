@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,6 +27,7 @@ public static class GameSelectBuilder
         public int order, minPlayers, maxPlayers;
         public string gameType;
         public Newtonsoft.Json.Linq.JObject clicker;
+        public Newtonsoft.Json.Linq.JObject settings;
         public string builderType;
         [JsonIgnore] public string packageDirectory;
     }
@@ -215,6 +216,17 @@ public static class GameSelectBuilder
 
     private static void ApplyCatalog(GameSelectPanel panel, Package[] packages)
     {
+        var clock = panel.transform.Find("Clock");
+        if (clock == null)
+        {
+            latin = AssetDatabase.LoadAssetAtPath<Font>(Root + "/Fonts/NotoSansJP-Bold.otf");
+            clock = Label("Clock", panel.transform, "00:00", -790, -469, 230, 50, 30, false).transform;
+            clock.gameObject.layer = 8;
+        }
+        if (clock.GetSiblingIndex() > panel.transform.Find("PackageContent").GetSiblingIndex())
+            clock.SetSiblingIndex(panel.transform.Find("PackageContent").GetSiblingIndex());
+        panel.clockLabel = clock.GetComponent<Text>();
+        panel.UpdateClock();
         string keepId = panel.selectedGameId;
         int n = packages.Length;
         panel.gameIds = new string[n]; panel.titles = new string[n]; panel.categories = new string[n];

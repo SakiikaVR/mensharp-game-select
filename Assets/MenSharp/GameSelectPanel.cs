@@ -25,6 +25,8 @@ public class GameSelectPanel : MenSharpBehaviour
     public Text centerTitle;
     public Text rightTitle;
     public Text playerLabel;
+    public Text clockLabel;
+    private float clockElapsed = 0f;
     public Text detailLabel;
     public Text statusLabel;
     public Image leftIcon;
@@ -57,7 +59,11 @@ public class GameSelectPanel : MenSharpBehaviour
     private int turnDirection;
     private int pendingTurns;
 
-    public void Start() { RefreshView(); }
+    public void Start() { RefreshView(); UpdateClock(); }
+    public void UpdateClock()
+    {
+        if (clockLabel != null) clockLabel.text = System.DateTime.Now.ToString("HH:mm");
+    }
     public void OnPlayerJoined(VRCPlayerApi player) { UpdatePlayers(); }
     public void OnPlayerLeft(VRCPlayerApi player) { UpdatePlayers(); }
 
@@ -135,6 +141,8 @@ public class GameSelectPanel : MenSharpBehaviour
 
     public void Update()
     {
+        clockElapsed += Time.unscaledDeltaTime;
+        if (clockElapsed >= 1f) { clockElapsed = 0f; UpdateClock(); }
         // Start queued turns on a fresh frame, outside the Select/OnSelect
         // callback chain (which re-enters this Udon program).
         if (!isTurning && pendingTurns != 0)

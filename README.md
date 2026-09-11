@@ -1,20 +1,24 @@
-﻿# MenSharp Game Select
+# MenSharp Game Select
 
-VRChat向けの16:9ゲーム選択パネルと、MenSharp製クッキークリッカー。ゲーム名フォルダーの追加・削除でゲームを管理できます。
+VRChat向けの16:9ゲーム選択パネルと、MenSharp製おやつ工房。ゲーム名フォルダーの追加・削除でゲームを管理できます。
 
 ![Game selector](docs/game-select.png)
 
-## v0.2.0：4モニター・共有起動
+## v0.3.0：おみくじ・おやつ工房・時計
+
+おみくじを実装し、既存の生産ゲームを独自名称「おやつ工房」に変更しました。ゲーム選択画面の左下には各プレイヤーの端末時刻（HH:mm）を表示します。
+
+## 4モニター・共有起動
 
 GameRoom.prefabに4枚のモニターを配置しました。どのモニターからゲームを開いても全モニターで起動し、戻る操作も共通です。ゲームIDをManual同期し、途中参加時は受信状態から復元します。大富豪本体や得点・手札の同期は今回含みません。詳細は[ROOM.md](Assets/GameSelect/ROOM.md)。
 
 ## 機能
 
 - 左右に循環するカルーセル、ホバーフォーカス、PLAY。
-- クッキークリッカー：クリック生産、クリック強化、自動生産設備、効果音、選択画面へ戻る。
+- おやつ工房：クリック生産、クリック強化、自動生産設備、効果音、選択画面へ戻る。
 - ゲームフォルダーにJSON・本体ソース・生成処理・画像・音声を同梱。
 - フォルダーを削除すると一覧と生成ゲームを除去。復元時は再登録。
-- 大富豪・おみくじは選択項目のみで、ゲーム本体は未実装。
+- 大富豪は選択項目のみで、ゲーム本体は未実装。おみくじは抽選・結果表示・効果音を実装。
 
 ## 導入
 
@@ -32,7 +36,7 @@ ClientSimではメニューの **Close Menu** を押し、**Tabを押しなが�
 ## ゲームの追加・削除
 
 ```text
-Assets/GameSelect/Packages/CookieClicker/
+Assets/GameSelect/Packages/SnackAtelier/
 ├─ game.json
 ├─ Runtime/CookieClickerGame.cs
 ├─ Runtime/CookieClicker.Runtime.asmdef
@@ -58,3 +62,11 @@ Assets/GameSelect/Packages/CookieClicker/
 
 ClientSimで左右の実クリック、クッキーの実クリック、購入・所持数不足・価格上昇・自動生産・再開時の進行保持を確認。ゲームフォルダーをAssets外へ移して本体アセンブリがない状態での登録解除と、復元後の再登録も確認しています。VRChat実クライアントでの公開ワールド検証は別途必要です。
 
+
+![おみくじ](docs/omikuji.png)
+
+![おやつ工房](docs/snack-atelier.png)
+
+v0.3.0追加検証：ClientSimで4枚の時計更新、変更後のパッケージIDによる共有起動・終了、生産・購入・価格上昇、抽選100回で中吉・大吉のみ、抽選中の連打防止と再開、通常の抽選演出を確認。Unityコンソールエラー0件。
+
+旧版から更新する場合は、古い `Assets/GameSelect/Packages/CookieClicker` をフォルダー全体で取り除いてからインポートしてください。新しい `SnackAtelier` と同時に置くとクラス定義が重複します。`.meta`も含めて扱ってください。

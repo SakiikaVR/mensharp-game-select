@@ -1,4 +1,4 @@
-﻿using MenSharp;
+using MenSharp;
 using UnityEngine;
 using UnityEngine.UI;
 using VRC.Udon;
@@ -37,7 +37,7 @@ public class CookieClickerGame : MenSharpBehaviour
             costs = new float[baseCosts.Length];
             for (int i = 0; i < costs.Length; i++) costs[i] = baseCosts[i];
         }
-        feedbackLabel.text = "クッキーをクリックして焼こう！";
+        feedbackLabel.text = "タップして、おやつを焼こう！";
         RefreshDisplay();
     }
 
@@ -47,7 +47,7 @@ public class CookieClickerGame : MenSharpBehaviour
         balance += clickPower;
         totalBaked += clickPower;
         pulse = 1f;
-        feedbackLabel.text = "+ " + Format(clickPower) + " cookies";
+        feedbackLabel.text = "+ " + Format(clickPower) + " 個できました";
         if (sound != null && clickSound != null) sound.PlayOneShot(clickSound);
         RefreshDisplay();
     }
@@ -95,7 +95,7 @@ public class CookieClickerGame : MenSharpBehaviour
     {
         balanceLabel.text = Format(balance);
         rateLabel.text = Format(clickPower) + " / CLICK     ·     " + Format(production) + " / SEC";
-        totalLabel.text = "TOTAL BAKED  " + Format(totalBaked);
+        totalLabel.text = "これまでの焼き上がり  " + Format(totalBaked);
         for (int i = 0; i < costs.Length; i++)
         {
             shopLabels[i].text = upgradeNames[i] + "   ×" + owned[i].ToString()
